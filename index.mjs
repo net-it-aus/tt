@@ -3,39 +3,49 @@ var v_portNumber = process.argv[2];
 if (v_portNumber == undefined) {
     console.log('Port Number not provided.');
     v_portNumber = 1974;
-    console.log('Port Number assigned is:- ', v_portNumber);
+    console.log('Port Number override assigned is:- ', v_portNumber);
 } else {
-    console.log('Port Number argument/option:- ',v_portNumber);
+    console.log('Port Number argument/option received is:- ',v_portNumber);
 }
 
 // const express = require('express');
 import express from 'express';
 const app = express();
 
-// const fs = require('fs');
-import fs from 'fs';
-
 // const os = require('os');
 import os from 'os';
 
-//  tell the express server to host static files in the 'public' folder
-app.use(express.static(path.join(__dirname, 'public'));
-app.use(express.static(path.join(__dirname, 'css'));
-app.use(express.static(path.join(__dirname, 'images-partial'));
-app.use(express.static(path.join(__dirname, 'js'));
-app.use(express.static(path.join(__dirname, 'resources')));
-console.log('path:- ' + path);
-console.log('__dirname:- ' + __dirname);
+// const fs = require('fs');
+import fs from 'fs';
+
+// const path = require('path');
+import path from 'path';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+console.log("__dirname:- " + __dirname);
+console.log("__filename:- " + __filename);
 
 //  tell the express server to recognise incoming data as JSON
 app.use(express.json({limit: '1mb'}));
 console.log('Server is recognising JSON');
 
+//  tell the express server to host static files in the 'public' folder
+console.log('path.join(__dirname, "public"):- ' + path.join(__dirname, 'public'));
+app.use(express.static(path.join('public')));
+app.use(express.static(path.join('css')));
+app.use(express.static(path.join('images-partial')));
+app.use(express.static(path.join('js')));
+app.use(express.static(path.join('resources')));
+
 // start the server
 app.listen( process.env.PORT || v_portNumber, () => { 
-  console.log('TT server is listening at port ' + v_portNumber + '\n');
+    console.log('total memory:- ',os.totalmem()/1000000000);
+    console.log('free memory:- ',os.freemem()/1000000000);
+    console.log('TT server is listening at port ' + v_portNumber);
+    console.log(Date().slice(0,25)+ '\n');
 });
-console.log(Date().slice(0,25));
 
 // SERVER REQUESTS LOG start
 app.all('*', (req, res) => {
