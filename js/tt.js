@@ -557,8 +557,8 @@ const hourHand = document.querySelector('.hour-hand');
   const hourDegrees = ((hour / 12) * 360) + ((mins/60)*30) + 90;
   hourHand.style.transform = `rotate(${hourDegrees}deg)`;
 }
-setInterval(setDate, 1000);
-setDate();
+// setInterval(setDate, 1000);
+// setDate();
 // CLOCK END CLOCK END CLOCK END CLOCK END CLOCK END CLOCK END CLOCK END CLOCK END CLOCK END CLOCK END CLOCK END CLOCK END CLOCK END CLOCK END
 
     // BOUNCE IMAGE AROUND VIEWPORT start
@@ -600,3 +600,54 @@ setDate();
         }
     }
     // BOUNCE IMAGE AROUND VIEWPORT end
+
+    // GET TEXT FILE start
+    function getTextFile(){
+
+        let file = "tt_favourite_events.txt"
+        fetch (file)
+        .then(x => x.text())
+        .then(y => document.getElementById("demo").innerHTML = y);
+
+    //     const url = "http://localhost:1974/tt_favourite_events.txt";
+    //     // const url = "https://turramurratrotters.org/tt_favourite_events.txt";
+    //     // const url = "https://www.turramurratrotters.org/popularEvents.html";
+    //     const options = {method: 'GET', mode: 'same-origin', headers: {'Content-Type': 'text/plain'}};
+    //     console.log(options);
+    //     const response = await fetch(url,{
+    //         method: 'GET', 
+    //         // mode: 'no-cors', 
+    //         mode: 'same-origin', 
+    //         headers: {
+    //             // 'Content-Type': 'text/plain'
+    //             // 'Content-Type': 'application/json'
+    //             'Content-Type': 'application/x-www-form-urlencoded'
+    //         }
+    //     })
+    //     .then( response => {
+    //         console.log("response:- \n" + response.toString());
+    //         return response.toString();
+    //     })
+    //     .then( res => {
+    //         console.log("res:- \n" + res);
+    //         //process your text! 
+    //     })
+    // }
+
+        // // read text from URL location
+        // var request = new XMLHttpRequest();
+        // // request.open('GET', 'http://www.puzzlers.org/pub/wordlists/pocket.txt', true);
+        // request.open('GET', 'localhost:tt_favourite_events.txt', true);
+        // request.send(null);
+        // request.onreadystatechange = function () {
+        //     if (request.readyState === 4 && request.status === 200) {
+        //         var type = request.getResponseHeader('Content-Type');
+        //         if (type.indexOf("text") !== 1) {
+        //             return request.responseText;
+        //         }
+        //     }
+        // }
+    // }
+    }
+    getTextFile();
+    // GET TEXT FILE end
