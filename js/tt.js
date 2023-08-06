@@ -480,23 +480,22 @@ var countries = ["Phil South","Alan Cole","Peter Welch","Les Bryce","John Marsha
 autocomplete(document.getElementById("ttName"), countries);
 
 function userPIN(){
-    // const vUserPIN = document.getElementById("userPIN").value;
-    // switch(vUserPIN) {
-    // case "74192320":
+    const vUserPIN = document.getElementById("userPIN").value;
+    switch(vUserPIN) {
+    case "74192320":
         document.getElementById("timesForm").style.display="block";
         document.getElementById("timesHistoryContainer").style.display="block";
-        // document.getElementById("emailTimesHistoryButton").style.display="block";
         document.getElementById("userAccess").style.display="none";
         document.getElementById("weeklySchedule").style.display="none";
         document.getElementById("headerElement").style.display="none";
         document.getElementById("bodyElement").style.display="none";
-        // break;
-    // // case "Donald1974":
-    // //     document.getElementById("timesForm").style.display="block";
-    // //     document.getElementById("timesHistory").style.display="block";
-    // //     break;
-    // default:
-    // }
+        break;
+    // case "Donald1974":
+    //     document.getElementById("timesForm").style.display="block";
+    //     document.getElementById("timesHistory").style.display="block";
+    //     break;
+    default:
+    }
     document.getElementById("userPIN").value = null;
 }
 
