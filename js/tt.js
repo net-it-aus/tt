@@ -497,7 +497,7 @@ function userPIN(){
     default:
     }
     document.getElementById("userPIN").value = null;
-}
+} 
 
 function resetZoom(){
     // var scale = 'scale(1)';
@@ -505,5 +505,10 @@ function resetZoom(){
     // document.body.style.msTransform =   scale;       // IE 9
     // document.body.style.transform = scale;     // General
 }
+
+document.getElementById("xMinutes").addEventListener("change",calcStats());
+document.getElementById("xSeconds").addEventListener("change",calcStats());
+document.getElementById("xDistance").addEventListener("change",calcStats());
+document.getElementById("ttCourse").addEventListener("change",calcStats());
 
 // DON'T FORGET TO DATA VALIDATE FOR ","
