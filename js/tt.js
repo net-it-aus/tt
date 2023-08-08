@@ -31,8 +31,9 @@ function calcStats(){
     let vHTML = ``;
     vHTML += `Run Statistics<br>`;
     // vHTML += `Pace ${(document.getElementById("xMinutes").value + (document.getElementById("xSeconds").value/60))/document.getElementById("xDistance").value*1000}`;
-    vHTML += `Pace ${((xMinutes + (xSeconds/60))/xDistance*1000).toFixed(4)}`;
+    vHTML += `<div>Pace ${((xMinutes + (xSeconds/60))/xDistance*1000).toFixed(4)}</div>`;
     document.getElementById("runStats").innerHTML = vHTML;
+    console.log(vHTML);
 }
 
 function getFirstSaturdayDate(){
@@ -510,5 +511,7 @@ document.getElementById("xMinutes").addEventListener("change",calcStats());
 document.getElementById("xSeconds").addEventListener("change",calcStats());
 document.getElementById("xDistance").addEventListener("change",calcStats());
 document.getElementById("ttCourse").addEventListener("change",calcStats());
+document.getElementById("runStats").addEventListener("mouseover",calcStats());
+document.getElementById("runStats").addEventListener("touchstart",calcStats());
 
 // DON'T FORGET TO DATA VALIDATE FOR ","

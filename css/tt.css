@@ -200,6 +200,9 @@ footer{
             color: #ffffff; 
             } */
 
+    .run-stats:hover{
+        /* background-color: aqua; */
+    }
     @media screen and (min-width: 900px) {
     article {
         padding: 1rem 3rem;
