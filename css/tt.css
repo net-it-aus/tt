@@ -1,6 +1,7 @@
 /* collapse all     Ctrl + k + 0 */
 /* expand all       Ctrl + k + j */
 /* word wrap toggle Alt + z */
+
 body{
     background-color: black;
     border: 1px solid white;
@@ -202,6 +203,10 @@ footer{
 
     .run-stats:hover{
         /* background-color: aqua; */
+    }
+    .city-2-surf-countdown{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
     }
     @media screen and (min-width: 900px) {
     article {

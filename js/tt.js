@@ -1,3 +1,26 @@
+// <!-- collapse all     Ctrl + k + 0 -->
+// <!-- expand all       Ctrl + k + j -->
+// <!-- word wrap toggle Alt + z -->
+
+// if(document.readyState === "complete") {
+//     // Fully loaded!
+// }
+// else if(document.readyState === "interactive") {
+//     // DOM ready! Images, frames, and other subresources are still downloading.
+// }
+// else {
+//     // Loading still in progress.
+//     // To wait for it to complete, add "DOMContentLoaded" or "load" listeners.
+
+//     window.addEventListener("DOMContentLoaded", () => {
+//         // DOM ready! Images, frames, and other subresources are still downloading.
+//     });
+
+//     window.addEventListener("load", () => {
+//         // Fully loaded!
+//     });
+// }
+
 // console.log(window.innerWidth);
 // console.log(window.innerHeight);
 // document.getElementById("bodyElement").innerText = window.innerWidth + " x " + window.innerHeight;
@@ -36,6 +59,47 @@ function calcStats(){
     console.log(vHTML);
 }
 
+function getFutureDate(){
+    var myDate = new Date();
+    var myYear = myDate.getFullYear();
+    var myFutureDate = new Date(myYear*1,7,1); /* 1 Jan yyyy*/
+    var myTestDate = myFutureDate;
+    var myCount = 0;
+    var myMonth = 0;
+    for (i=0;i<27;i++){
+        myTestDate = new Date(myYear*1,7,i+1) /* i starts at 0 */ 
+        // console.log(myTestDate);
+        if (myTestDate.getDay()+1==1){ /* = 0 Sunday */
+            myCount += 1;
+            if (myCount===2){
+                myMonth = ((myTestDate.getMonth()*1)+1);
+                if (myMonth<10){myMonth = "0" + myMonth;}
+                const myFutureDate = myTestDate.getFullYear() + "-" + myMonth + "-" + myTestDate.getDate();
+                // console.log(myFutureDate);
+                return myFutureDate;
+            }
+        }
+    }
+}
+function getDaysToFutureDate(){
+    var myDate = new Date();
+    var myYear = myDate.getFullYear();
+    var myFutureDate = new Date(myYear*1,7,1); /* 1 Jan yyyy*/
+    var myTestDate = myFutureDate;
+    var myCount = 0;
+    var myDays = 0;
+    for (i=0;i<27;i++){
+        myTestDate = new Date(myYear*1,7,i+1) /* i starts at 0 */ 
+        // console.log(myTestDate);
+        if (myTestDate.getDay()+1==1){ /* = 0 Sunday */
+            myCount += 1;
+            if (myCount===2){
+                myDays = ((myTestDate - myDate)/(24*60*60*1000)).toFixed(1);
+                return myDays;
+            }
+        }
+    }
+}
 function getFirstSaturdayDate(){
     var myDate = new Date();
     var myYear = myDate.getFullYear();
@@ -514,4 +578,18 @@ document.getElementById("ttCourse").addEventListener("change",calcStats());
 document.getElementById("runStats").addEventListener("mouseover",calcStats());
 document.getElementById("runStats").addEventListener("touchstart",calcStats());
 
-// DON'T FORGET TO DATA VALIDATE FOR ","
+// console.log(getFutureDate());
+var daysToFutureDate = 0;
+var baseDate = new Date();
+// console.log(baseDate);
+daysToFutureDate = document.getElementById("futureDate").value - baseDate;
+document.getElementById("daysCount").innerHTML = getDaysToFutureDate() + " days.";
+
+window.addEventListener("load", () => {
+    // Fully loaded!
+    document.getElementById("futureDate").value = getFutureDate();
+});
+
+
+
+// DON'T FORGET TO DATA VALIDATE FOR ","5

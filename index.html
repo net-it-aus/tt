@@ -37,6 +37,14 @@
     <main>
         <div id="mainElement">
             <div id="weeklySchedule" class="weekly-schedule"></div>
+            <br>
+            <div class="beanie-heading"><h2>City-2-Surf Countdown</h2></div>
+            <div id="city2surfCountdown" class="city-2-surf-countdown">
+                <label for="futureDate">City-2-Surf Date:</label><br>
+                <input type="date" id="futureDate" onchange="countToFutureDate()" name="futureDate"><br>
+                <div id="daysCount">sgfsd augsdi</div>
+            </div>
+            <br>
             <div class="beanie-heading"><h2>Record Times</h2></div>
             <div id="recordTimes" class="record-times">
 
@@ -88,12 +96,14 @@
                 <br><button onclick="emailTimesIn()" id="emailTimesHistoryButton" class="email-times-history-button">email times in</button><br>
                 <br><button onclick="eraseHistory()" id="eraseTimesHistoryButton" class="erase-times-history-button">erase times history</button><br>
             </div>
+            <br>
         </div>
     </main>
     <footer>
         <br>
         <div>&copy Turramurra Trotters</div>
         <div>Web site by Net IT Australia</div>
+        <br>
     </footer>
 
     <script>
