@@ -95,7 +95,7 @@ function getDaysToFutureDate(){
             myCount += 1;
             if (myCount===2){
                 myDays = ((myTestDate - myDate)/(24*60*60*1000)).toFixed(1);
-                return myDays;
+                return myDays + "days.";
             }
         }
     }
@@ -583,7 +583,7 @@ var daysToFutureDate = 0;
 var baseDate = new Date();
 // console.log(baseDate);
 daysToFutureDate = document.getElementById("futureDate").value - baseDate;
-document.getElementById("daysCount").innerHTML = getDaysToFutureDate() + " days.";
+document.getElementById("daysCount").innerHTML = getDaysToFutureDate();
 
 window.addEventListener("load", () => {
     // Fully loaded!
