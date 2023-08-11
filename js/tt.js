@@ -361,6 +361,18 @@ function displayTimesHistory(){
     document.getElementById("timesHistory").innerHTML = vHTML;
 }
 displayTimesHistory();
+function eraseHistory(){
+    aTimes = [];
+    for (let i = 0; i < localStorage.length; i++) {
+        if (localStorage.key(i).substring(0,7) == 'TT time') {
+            aTimes.push(localStorage.key(i));
+        }
+    }
+    for (var i = 0; i < aTimes.length; i++) {
+        localStorage.removeItem(aTimes[i]);
+    }
+    displayTimesHistory();
+}
 
 function emailTimesIn(){
     let aTimes = [];
@@ -540,7 +552,7 @@ function autocomplete(inp, arr) {
     });
 }
 /*An array containing all the country names in the world:*/
-var countries = ["Phil South","Alan Cole","Peter Welch","Les Bryce","John Marshall","Margaret Marchall","Brian Matthes","Lyn Matthews"];
+var countries = ["Phil South","Alan Cole","Peter Welch","Les Bryce","John Marshall","Margaret Marchall","Brian Matthes","Lyn Matthews","Ralph Pain","Geoff Russell","Clare Pain","Nick Swan","Allison Lilley"];
 /*initiate the autocomplete function on the "ttName" element, and pass along the countries array as possible autocomplete values:*/
 autocomplete(document.getElementById("ttName"), countries);
 
@@ -551,6 +563,7 @@ function userPIN(){
         document.getElementById("timesForm").style.display="block";
         document.getElementById("timesHistoryContainer").style.display="block";
         document.getElementById("userAccess").style.display="none";
+        document.getElementById("city2surfCountdownWrapper").style.display="none";
         document.getElementById("weeklySchedule").style.display="none";
         document.getElementById("headerElement").style.display="none";
         document.getElementById("bodyElement").style.display="none";
