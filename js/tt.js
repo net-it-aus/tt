@@ -95,7 +95,38 @@ function getDaysToFutureDate(){
             myCount += 1;
             if (myCount===2){
                 myDays = ((myTestDate - myDate)/(24*60*60*1000)).toFixed(1);
-                return myDays + "days.";
+                if(myDays < -1){
+                // if(myDays < 0){
+                    var myCount = 0;
+                    var myDays = 0;
+                    for (i=0;i<27;i++){
+                        myTestDate = new Date((myYear*1)+1,7,i+1) /* i starts at 0 */ 
+                        // console.log(myTestDate);
+                        if (myTestDate.getDay()+1==1){ /* = 0 Sunday */
+                            myCount += 1;
+                            if (myCount===2){
+                                myMonth = ((myTestDate.getMonth()*1)+1);
+                                if (myMonth<10){myMonth = "0" + myMonth;}
+                                const myFutureDate = myTestDate.getFullYear() + "-" + myMonth + "-" + myTestDate.getDate();
+                                console.log(myFutureDate);
+                                document.getElementById("futureDate").value = myFutureDate;
+                                myDays = ((myTestDate - myDate)/(24*60*60*1000)).toFixed(1);
+                                return myDays + " days.";
+                            }
+                        }
+                    }
+                }else{
+                    if (myDays < 0){
+                        myDays = 0;
+                        // myDays = myDays.toFixed(1);
+                    }
+                    myMonth = ((myTestDate.getMonth()*1)+1);
+                    if (myMonth<10){myMonth = "0" + myMonth;}
+                    const myFutureDate = myTestDate.getFullYear() + "-" + myMonth + "-" + myTestDate.getDate();
+                    console.log(myFutureDate);
+                    document.getElementById("futureDate").value = myFutureDate;
+                    return myDays + " days.";
+                }
             }
         }
     }
@@ -551,15 +582,19 @@ function autocomplete(inp, arr) {
         closeAllLists(e.target);
     });
 }
-/*An array containing all the country names in the world:*/
-var countries = ["Phil South","Alan Cole","Peter Welch","Les Bryce","John Marshall","Margaret Marchall","Brian Matthes","Lyn Matthews","Ralph Pain","Geoff Russell","Clare Pain","Nick Swan","Allison Lilley"];
-/*initiate the autocomplete function on the "ttName" element, and pass along the countries array as possible autocomplete values:*/
-autocomplete(document.getElementById("ttName"), countries);
+// /*An array containing all the country names in the world:*/
+// var runnerNames = ["Phil South","Alan Cole","Peter Welch","Les Bryce","John Marshall","Margaret Marchall","Brian Matthes","Lyn Matthews","Ralph Pain","Geoff Russell","Clare Pain","Nick Swan","Allison Lilley"];
+// /*initiate the autocomplete function on the "ttName" element, and pass along the runnerNames array as possible autocomplete values:*/
+// autocomplete(document.getElementById("ttName"), runnerNames);
 
 function userPIN(){
     const vUserPIN = document.getElementById("userPIN").value;
     switch(vUserPIN) {
     case "74192320":
+        /*An array containing all the country names in the world:*/
+        var runnerNames = ["Phil South","Alan Cole","Peter Welch","Les Bryce","John Marshall","Margaret Marchall","Brian Matthes","Lyn Matthews","Ralph Pain","Geoff Russell","Clare Pain","Nick Swan","Allison Lilley"];
+        /*initiate the autocomplete function on the "ttName" element, and pass along the runnerNames array as possible autocomplete values:*/
+        autocomplete(document.getElementById("ttName"), runnerNames);
         document.getElementById("timesForm").style.display="block";
         document.getElementById("timesHistoryContainer").style.display="block";
         document.getElementById("userAccess").style.display="none";
@@ -568,10 +603,19 @@ function userPIN(){
         document.getElementById("headerElement").style.display="none";
         document.getElementById("bodyElement").style.display="none";
         break;
-    // case "Donald1974":
-    //     document.getElementById("timesForm").style.display="block";
-    //     document.getElementById("timesHistory").style.display="block";
-    //     break;
+    case "":
+        // /*An array containing all the country names in the world:*/
+        // var runnerNames = [];
+        // /*initiate the autocomplete function on the "ttName" element, and pass along the runnerNames array as possible autocomplete values:*/
+        // autocomplete(document.getElementById("ttName"), runnerNames);
+        // document.getElementById("timesForm").style.display="block";
+        // document.getElementById("timesHistoryContainer").style.display="block";
+        // document.getElementById("userAccess").style.display="none";
+        // document.getElementById("city2surfCountdownWrapper").style.display="none";
+        // document.getElementById("weeklySchedule").style.display="none";
+        // document.getElementById("headerElement").style.display="none";
+        // document.getElementById("bodyElement").style.display="none";
+        // break;
     default:
     }
     document.getElementById("userPIN").value = null;
@@ -591,18 +635,18 @@ document.getElementById("ttCourse").addEventListener("change",calcStats());
 document.getElementById("runStats").addEventListener("mouseover",calcStats());
 document.getElementById("runStats").addEventListener("touchstart",calcStats());
 
-// console.log(getFutureDate());
-var daysToFutureDate = 0;
-var baseDate = new Date();
-// console.log(baseDate);
-daysToFutureDate = document.getElementById("futureDate").value - baseDate;
+// // console.log(getFutureDate());
+// var daysToFutureDate = 0;
+// var baseDate = new Date();
+// // console.log(baseDate);
+// daysToFutureDate = document.getElementById("futureDate").value - baseDate;
 document.getElementById("daysCount").innerHTML = getDaysToFutureDate();
 
 window.addEventListener("load", () => {
     // Fully loaded!
-    document.getElementById("futureDate").value = getFutureDate();
+    // document.getElementById("futureDate").value = getFutureDate();
 });
 
 
 
-// DON'T FORGET TO DATA VALIDATE FOR ","5
+// DON'T FORGET TO DATA VALIDATE FOR ","
