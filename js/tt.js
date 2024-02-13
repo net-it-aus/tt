@@ -165,7 +165,7 @@ function getDaysToFutureDate(){
                                 console.log(myFutureDate);
                                 document.getElementById("futureDate").value = myFutureDate;
                                 myDays = ((myTestDate - myDate)/(24*60*60*1000)).toFixed(1);
-                                return myDays + " days.";
+                                return (myDays * 1 + 1) + " days.";
                             }
                         }
                     }
@@ -179,7 +179,7 @@ function getDaysToFutureDate(){
                     const myFutureDate = myTestDate.getFullYear() + "-" + myMonth + "-" + myTestDate.getDate();
                     console.log(myFutureDate);
                     document.getElementById("futureDate").value = myFutureDate;
-                    return myDays + " days.";
+                    return (myDays * 1 + 1) + " days.";
                 }
             }
         }
@@ -702,5 +702,6 @@ window.addEventListener("load", () => {
 });
 
 
+// city2SurfDateChange();
 
 // DON'T FORGET TO DATA VALIDATE FOR ","
