@@ -16,9 +16,17 @@
 //         // DOM ready! Images, frames, and other subresources are still downloading.
 //     });
 
-//     window.addEventListener("load", () => {
-//         // Fully loaded!
-//     });
+    window.addEventListener("load", () => {
+        // Fully loaded!
+
+        const datval_city2SurfDate = document.getElementById("futureDate");
+
+        // detect City-2-Surf date change
+        datval_city2SurfDate.addEventListener("change", (event) => {
+            city2SurfDateChange();
+        });
+    
+    });
 // }
 
 // console.log(window.innerWidth);
@@ -58,6 +66,52 @@ function calcStats(){
     document.getElementById("runStats").innerHTML = vHTML;
     console.log(vHTML);
 }
+
+// city2SurfDateChange START
+function city2SurfDateChange(){
+
+    var d1 = new Date();
+    // var d2 = document.getElementById("city2SurfDate").value;
+    var d2 = document.getElementById("futureDate").value;
+
+    // console.log("d2 ",d2);
+    var nDays = (Date.UTC(d2.slice(0,4), d2.slice(5,7)*1-1, d2.slice(8,10)) -
+                 Date.UTC(d1.getFullYear(), d1.getMonth(), d1.getDate())) / 86400000;
+                //  console.log("UTC calc date diff ",nDays);
+    d2 = d2.slice(0,4)+ "-" + d2.slice(5,7)+ "-" + d2.slice(8,10);
+
+    d1Year = d1.getFullYear();
+    d1Month = d1.getMonth() + 1;
+    if (d1Month < 10){d1Month="0" + d1Month};
+    d1Day = d1.getDate();
+    if (d1Day < 10){d1Day="0" + d1Day};
+    d1 = d1Year + "-" + d1Month + "-" + d1Day;
+    // console.log("d1 ",d1);
+
+    document.getElementById("daysCount").innerHTML = daysDiff(d1,d2);
+
+}
+// city2SurfDateChange END
+
+// daysDiff START
+function daysDiff(d1,d2){
+
+    const date1 = new Date(d1.slice(0,4), ((d1.slice(5,7)*1)-1), d1.slice(8,10));
+    // console.log(date1.toDateString());
+    const date2 = new Date(d2.slice(0,4), ((d2.slice(5,7)*1)-1), d2.slice(8,10));
+    // console.log(date2.toDateString());
+
+    // The number of milliseconds in one day
+   const ONE_DAY = 1000 * 60 * 60 * 24;
+
+   // Calculate the difference in milliseconds
+   const differenceMs = Math.abs(date1 - date2);
+
+   // Convert back to days and return
+//    console.log(Math.round(differenceMs / ONE_DAY));
+   return Math.round(differenceMs / ONE_DAY);
+}
+// daysDiff END
 
 function getFutureDate(){
     var myDate = new Date();
