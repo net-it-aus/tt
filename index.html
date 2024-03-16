@@ -32,10 +32,29 @@
         <div class="preHeader"><h1>Turramurra Trotters, ...running since 1974</h1></div>
     </div>
     <header>
-        <div id="headerElement" class="fb-link"><a href="https://www.facebook.com/TurramurraTrotters"><br>Learn ABOUT US on Facebook<br><br></a></div>
+        <!-- <div id="headerElement" class="fb-link"><a href="https://www.facebook.com/TurramurraTrotters"><br>Learn ABOUT US on Facebook<br><br></a></div> -->
+        <div id="headerElement" class="fb-link"><a href="https://www.facebook.com/groups/TurramurraTrottersForum/"><br>Learn ABOUT US on Facebook<br><br></a></div>
     </header>
     <main>
         <div id="mainElement">
+            <div id="contactUs" class="contact-us">
+                <div class="beanie-heading"><h2>Contact Us</h2></div>
+                <table class="table-contact">
+                    <tr class="table-contact">
+                        <td class="table-contact">Alan Cole</td>
+                        <td class="table-contact">0418 229 507</td>
+                    </tr>
+                    <tr class="table-contact">
+                        <td class="table-contact">Peter Welch</td>
+                        <td class="table-contact">0410 834 833</td>
+                    </tr>
+                    <tr class="table-contact">
+                        <td class="table-contact">Les Bryce</td>
+                        <td class="table-contact">0429 813 351</td>
+                    </tr>
+                </table>
+            </div>
+            <br>
             <div id="weeklySchedule" class="weekly-schedule"></div>
             <br>
             <div id="city2surfCountdownWrapper">
@@ -47,8 +66,9 @@
                 </div>
             </div>
             <br>
-            <div class="beanie-heading"><h2>Record Times</h2></div>
-            <div id="recordTimes" class="record-times">
+            <input type="date" id="xDate" onfocus="resetZoom()" name="xDate" style="visibility:hidden"><br>
+            <!-- <div class="beanie-heading"><h2>Record Times</h2></div> -->
+            <!-- <div id="recordTimes" class="record-times">
 
                 <div id="userAccess">
                     <label for="userPIN">User PIN:</label><br>
@@ -87,7 +107,6 @@
                     <input type="date" id="xDate" onfocus="resetZoom()" name="xDate"><br>
                     <br>
 
-                    <!-- <input type="submit" value="Submit"> -->
                     <input type="button" onclick="saveTime()" value="Save">
 
                 </form>
@@ -98,7 +117,7 @@
                 <br><button onclick="emailTimesIn()" id="emailTimesHistoryButton" class="email-times-history-button">email times in</button><br>
                 <br><button onclick="eraseHistory()" id="eraseTimesHistoryButton" class="erase-times-history-button">erase times history</button><br>
             </div>
-            <br>
+            <br> -->
         </div>
     </main>
     <footer>

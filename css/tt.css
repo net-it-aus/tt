@@ -2,6 +2,11 @@
 /* expand all       Ctrl + k + j */
 /* word wrap toggle Alt + z */
 
+.table-contact{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
 body{
     background-color: black;
     border: 1px solid white;

@@ -64,7 +64,7 @@ function calcStats(){
     // vHTML += `Pace ${(document.getElementById("xMinutes").value + (document.getElementById("xSeconds").value/60))/document.getElementById("xDistance").value*1000}`;
     vHTML += `<div>Pace ${((xMinutes + (xSeconds/60))/xDistance*1000).toFixed(4)}</div>`;
     document.getElementById("runStats").innerHTML = vHTML;
-    console.log(vHTML);
+    // console.log(vHTML);
 }
 
 // city2SurfDateChange START
@@ -162,7 +162,7 @@ function getDaysToFutureDate(){
                                 myMonth = ((myTestDate.getMonth()*1)+1);
                                 if (myMonth<10){myMonth = "0" + myMonth;}
                                 const myFutureDate = myTestDate.getFullYear() + "-" + myMonth + "-" + myTestDate.getDate();
-                                console.log(myFutureDate);
+                                // console.log(myFutureDate);
                                 document.getElementById("futureDate").value = myFutureDate;
                                 myDays = ((myTestDate - myDate)/(24*60*60*1000)).toFixed(1);
                                 return (myDays * 1 + 1) + " days.";
@@ -177,7 +177,7 @@ function getDaysToFutureDate(){
                     myMonth = ((myTestDate.getMonth()*1)+1);
                     if (myMonth<10){myMonth = "0" + myMonth;}
                     const myFutureDate = myTestDate.getFullYear() + "-" + myMonth + "-" + myTestDate.getDate();
-                    console.log(myFutureDate);
+                    // console.log(myFutureDate);
                     document.getElementById("futureDate").value = myFutureDate;
                     return (myDays * 1 + 1) + " days.";
                 }
@@ -417,7 +417,7 @@ function saveTime(){
     var vSeconds = document.getElementById("xSeconds").value * 1;
     vSeconds = vSeconds.toFixed(3);
     var xTimeRecord = document.getElementById("xDate").value + " , " + document.getElementById("ttName").value + " , " + vDistance + " metres" + " , " + vMinutes + " min" + " , " + vSeconds + " sec";
-    console.log(xTimeRecord);
+    // console.log(xTimeRecord);
     window.localStorage.setItem("TT time recorded on:- " + myTimeDate.toDateString() + " at:- " + myTimeDate.toTimeString().slice(0,8), xTimeRecord);
 
     // document.getElementById("fName").value = "";
@@ -432,18 +432,18 @@ function saveTime(){
 function displayTimesHistory(){
     aTimes = [];
     for (let i = 0; i < localStorage.length; i++) {
-        console.log(localStorage.getItem(localStorage.key(i)));
+        // console.log(localStorage.getItem(localStorage.key(i)));
         aTimes.push(localStorage.getItem(localStorage.key(i)));
     }
     aTimes.sort();
     aTimes.reverse();
-    console.log(aTimes);
+    // console.log(aTimes);
     var vHTML = ``;
     for (let i = 0; i < aTimes.length; i++) {
         vHTML += `${aTimes[i]}<br>`;
     }
-    console.log(vHTML);
-    document.getElementById("timesHistory").innerHTML = vHTML;
+    // console.log(vHTML);
+    // document.getElementById("timesHistory").innerHTML = vHTML;
 }
 displayTimesHistory();
 function eraseHistory(){
@@ -462,12 +462,12 @@ function eraseHistory(){
 function emailTimesIn(){
     let aTimes = [];
     for (let i = 0; i < localStorage.length; i++) {
-        console.log(localStorage.getItem(localStorage.key(i)) + " , " + localStorage.key(i) + " , ");
+        // console.log(localStorage.getItem(localStorage.key(i)) + " , " + localStorage.key(i) + " , ");
         aTimes.push(localStorage.getItem(localStorage.key(i)) + " , " + localStorage.key(i) + " , ");
     }
     aTimes.sort();
     aTimes.reverse();
-    console.log(aTimes);
+    // console.log(aTimes);
     let vTEXT = `Run date: , Name , Distance , Minutes , Seconds , Record date ,%0D%0A`;
     var vHTML = ``;
     vHTML += `<div><h2>Turramurra Trotters</h2></div>`;
@@ -491,32 +491,32 @@ function emailTimesIn(){
                 switch (nCount){
                     case 0:
                         runDate = aTimes[i].slice(nStart,nEnd);
-                        console.log(nStart, nEnd, runDate);
+                        // console.log(nStart, nEnd, runDate);
                         vHTML += `<td>${runDate}</td>`;
                         break;
                     case 1:
                         runnerName = aTimes[i].slice(nStart,nEnd);
-                        console.log(nStart, nEnd, runnerName);
+                        // console.log(nStart, nEnd, runnerName);
                         vHTML += `<td>${runnerName}</td>`;
                         break;
                     case 2:
                         runDistance = aTimes[i].slice(nStart,nEnd);
-                        console.log(nStart, nEnd, runDistance);
+                        // console.log(nStart, nEnd, runDistance);
                         vHTML += `<td>${runDistance}</td>`;
                         break;
                     case 3:
                         runMinutes = aTimes[i].slice(nStart,nEnd);
-                        console.log(nStart, nEnd, runMinutes);
+                        // console.log(nStart, nEnd, runMinutes);
                         vHTML += `<td>${runMinutes}</td>`;
                         break;
                     case 4:
                         runSeconds = aTimes[i].slice(nStart,nEnd);
-                        console.log(nStart, nEnd, runSeconds);
+                        // console.log(nStart, nEnd, runSeconds);
                         vHTML += `<td>${runSeconds}</td>`;
                         break;
                     case 5:
                         runRecordedDateTime = aTimes[i].slice(nStart,nEnd);
-                        console.log(nStart, nEnd, runRecordedDateTime);
+                        // console.log(nStart, nEnd, runRecordedDateTime);
                         vHTML += `<td>${runRecordedDateTime}</td>`;
                         break;
                 }
@@ -529,8 +529,8 @@ function emailTimesIn(){
         vHTML += `</tr>`;
     }
     vHTML += `</table>`;
-    console.log(vHTML);
-    console.log(vTEXT);
+    // console.log(vHTML);
+    // console.log(vTEXT);
     // for (let i = 0; i < aTimes.length; i++) {
     //     vHTML += `${aTimes[i]}<br>`;
     // }
@@ -682,12 +682,12 @@ function resetZoom(){
     // document.body.style.transform = scale;     // General
 }
 
-document.getElementById("xMinutes").addEventListener("change",calcStats());
-document.getElementById("xSeconds").addEventListener("change",calcStats());
-document.getElementById("xDistance").addEventListener("change",calcStats());
-document.getElementById("ttCourse").addEventListener("change",calcStats());
-document.getElementById("runStats").addEventListener("mouseover",calcStats());
-document.getElementById("runStats").addEventListener("touchstart",calcStats());
+// document.getElementById("xMinutes").addEventListener("change",calcStats());
+// document.getElementById("xSeconds").addEventListener("change",calcStats());
+// document.getElementById("xDistance").addEventListener("change",calcStats());
+// document.getElementById("ttCourse").addEventListener("change",calcStats());
+// document.getElementById("runStats").addEventListener("mouseover",calcStats());
+// document.getElementById("runStats").addEventListener("touchstart",calcStats());
 
 // // console.log(getFutureDate());
 // var daysToFutureDate = 0;
