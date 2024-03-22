@@ -1,22 +1,200 @@
-// <!-- collapse all     Ctrl + k + 0 -->
-// <!-- expand all       Ctrl + k + j -->
-// <!-- word wrap toggle Alt + z -->
+// GLOBAL VARIABLES
 
-// if(document.readyState === "complete") {
-//     // Fully loaded!
-// }
-// else if(document.readyState === "interactive") {
-//     // DOM ready! Images, frames, and other subresources are still downloading.
-// }
-// else {
-//     // Loading still in progress.
-//     // To wait for it to complete, add "DOMContentLoaded" or "load" listeners.
+//   // Get the root element
+//   let r = document.querySelector(':root');
+// // SET CSS VARIABLES USING JAVASCRIPT
+//   // Create a function for getting a variable value
+//   function myFunction_get() {
+//     // Get the styles (properties and values) for the root
+//     var rs = getComputedStyle(r);
+//     // Alert the value of the --blue variable
+//     alert("The value of --blue is: " + rs.getPropertyValue('--blue'));
+//   }
 
-//     window.addEventListener("DOMContentLoaded", () => {
-//         // DOM ready! Images, frames, and other subresources are still downloading.
+//   // Create a function for setting a variable value
+//   function myFunction_set() {
+//     // Set the value of variable --blue to another value (in this case "lightblue")
+//     r.style.setProperty('--blue', 'lightblue');
+//   }
+// // SET CSS VARIABLES USING JAVASCRIPT
+
+  function closePopupMessage(){
+    document.getElementById("popup-message").style.display="none";
+  }
+  
+  function populateCopyrightNotice(){
+    // console.log("copyright-notice display status:- " + document.getElementById("copyright-notice").style.display);
+    var dt = new Date();
+    // var dt1 = dt.toLocaleString().slice(6,10);
+    var dt1 = dt.getFullYear();
+    // document.getElementById("copyright-notice").innerHTML =  `<span class="material-icons material-icons">copyright</span><br>&copy all rights reserved 2019-${dt1}`;
+    document.getElementById("copyright-notice").innerHTML =  '<span class="material-icons material-icons">copyright</span><br>&copy Net IT Australia ' + dt1;
+  }
+  
+//   function addEventListeners(){
+//     // window.addEventListener("load",  (event) => {
+//     //   boxElement = document.querySelector("#box");
+//     //   createObserver(boxElement);
+//     //   // createObserver(document.querySelector("#box"));
+//     //   createObserver(document.getElementById("flip-tile-1of6")); 
+//     //   createObserver(document.getElementById("flip-tile-2of6")); 
+//     //   createObserver(document.getElementById("flip-tile-3of6")); 
+//     //   createObserver(document.getElementById("flip-tile-4of6")); 
+//     //   createObserver(document.getElementById("flip-tile-5of6")); 
+//     //   createObserver(document.getElementById("flip-tile-6of6")); 
+//     //   // const myElements = document.getElementsByClassName("flip-tile");
+//     //   // console.log(myElements.length);
+//     //   // let myElement; 
+//     //   // for (i = 0; i < myElements.length; i++) {
+//     //   //   myElement = document.getElementById(myElements[i].id);
+//     //   //   console.log(myElement);
+//     //   //   createObserver(myElement);
+//     //   // }  
+//     // },false);
+//     document.getElementById("current-date-time").addEventListener("mouseover",function(){
+//         console.log(document.getElementById("current-date-time").style.display);
+//         var dt = new Date();
+//         // document.getElementById("current-date-time-span").innerHTML=dt.toLocaleString().slice(0,25);    
+//     }); 
+//     // document.addEventListener("scroll",function(){
+//     //     // check if element is in view
+//     //     if (isInView("typewriter-text-animation")===true && typewriterCharInt === 0){
+//     //       typeOutText();
+//     //     }
+//     // });
+  
+//     // document.getElementById("typewriter-text-animation").addEventListener("mouseover",function(){
+//     //   // check if element is in view
+//     //   // if (isInView("typewriter-text-animation")===true && typewriterCharInt >= typewriterText.length){
+//     //   document.getElementById("typewriter-text-animation").innerHTML='';
+//     //   typewriterCharInt = 0;
+//     //   typeOutText();
+//     //   // }
+//     // });
+  
+//     // document.getElementById("increasing-text-size-container").addEventListener("mouseover",function(){
+//     //   // check if element is in view
+//     //  if (isInView("increasing-text-size-container")===true){
+//     //     document.getElementById("increasing-text-size").classList.remove("increasing-text-size");
+//     //     document.getElementById("increasing-text-size").offsetWidth;
+//     //     document.getElementById("increasing-text-size").classList.add("increasing-text-size");
+//     //   }
+//     // });
+  
+//     // function isInView(e) {
+//     //   var rect = document.getElementById(e).getBoundingClientRect();
+//     //   // console.log({x0:rect.left,y1:rect.top,x1:rect.right,y0:rect.bottom});
+//     //   if (rect.top >= 0 && rect.left >= 0 && rect.right <= window.innerWidth && rect.bottom <= window.innerHeight) {
+//     //     return true;
+//     //   } else{
+//     //     document.getElementById("typewriter-text-animation").innerText="";
+//     //     typewriterCharInt = 0;
+//     //     return false;
+//     //   }
+//     // }
+//   }
+
+  
+// window.addEventListener("load", () => {
+//     document.getElementById("area-01-button").addEventListener("click", (event) => {
+//         document.getElementById("popup-courses").style.display = "block";
 //     });
+// });
+// READY STATE start ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+if(document.readyState === "complete") {
+    // Fully loaded!
+    // console.log('document.readyState === "complete"');
+}
+else if(document.readyState === "interactive") {
+    // DOM ready! Images, frames, and other subresources are still downloading.
+    // console.log(`document.readyState === "interactive"`);
+}
+else {
+    // Loading still in progress.
+    // To wait for it to complete, add "DOMContentLoaded" or "load" listeners.
+    // console.log("Loading still in progress...");
+
+    window.addEventListener("DOMContentLoaded", () => {
+        // DOM ready! Images, frames, and other subresources are still downloading.
+        // console.log(`window.addEventListener("DOMContentLoaded"`);
+    });
 
     window.addEventListener("load", () => {
+        // Fully loaded!
+        // console.log(`window.addEventListener("load") completed`);
+
+        document.body.addEventListener('click', function (evt) {
+
+            if (evt.target.classList.contains("popup-courses-open")) {
+                // console.log(evt.target);
+                // if(document.getElementById("popup-courses").style.display === "block"){
+                //     document.getElementById("popup-courses").style.display = "none";
+                // } else {
+                    document.getElementById("popup-courses").style.display = "block";
+                    document.getElementById("popup-courses-close-button").style.display = "inline-block";
+                // }
+            }
+            // if (evt.target.classList.contains("popup-courses-close")) {
+            //     console.log(evt.target);
+            //     // if(document.getElementById("popup-courses").style.display === "block"){
+            //         document.getElementById("popup-courses").style.display = "none";
+            //         document.getElementById("popup-courses-close-button").style.display = "none";
+            //     // } else {
+            //     //     document.getElementById("popup-courses").style.display = "block";
+            //     //     document.getElementById("popup-courses-close-button").style.display = "block";
+            //     // }
+            // }
+            document.getElementById("popup-courses-close-button").addEventListener("click", function (evt) {
+                document.getElementById("popup-courses").style.display = "none";
+                document.getElementById("popup-courses-close-button").style.display = "none";
+            })
+
+            if (evt.target.classList.contains("popup-popular-events-open")) {
+                // console.log(evt.target);
+                document.getElementById("popup-popular-events").style.display = "block";
+                document.getElementById("popup-popular-events-close-button").style.display = "inline-block";
+            }
+            document.getElementById("popup-popular-events-close-button").addEventListener("click", function (evt) {
+                document.getElementById("popup-popular-events").style.display = "none";
+                document.getElementById("popup-popular-events-close-button").style.display = "none";
+            })
+
+            if (evt.target.classList.contains("popup-course-records-open")) {
+                // console.log(evt.target);
+                document.getElementById("popup-course-records").style.display = "block";
+                document.getElementById("popup-course-records-close-button").style.display = "inline-block";
+            }
+            document.getElementById("popup-course-records-close-button").addEventListener("click", function (evt) {
+                document.getElementById("popup-course-records").style.display = "none";
+                document.getElementById("popup-course-records-close-button").style.display = "none";
+            })
+
+            if (evt.target.classList.contains("popup-c2s-training-open")) {
+                // console.log(evt.target);
+                const weeklyScheduleHTML = createTable();
+                // console.log(weeklyScheduleHTML);
+                document.getElementById("weeklySchedule").innerHTML = weeklyScheduleHTML;
+                document.getElementById("popup-c2s-training").style.display = "block";
+                document.getElementById("popup-c2s-training-close-button").style.display = "inline-block";
+            }
+            document.getElementById("popup-c2s-training-close-button").addEventListener("click", function (evt) {
+                document.getElementById("popup-c2s-training").style.display = "none";
+                document.getElementById("popup-c2s-training-close-button").style.display = "none";
+            })
+
+        }, false);
+
+        // let myElements;
+        // myElements = document.getElementsByClassName("popup-courses-button");
+        // console.log(myElements);
+        // for (i=0; i < myElements.length; i++){
+        //     console.log(myElements[i]);
+        //     myElements[i].addEventListener("click", (event) => {
+        //         console.log(`${myElements[i]}`);
+        //         myElements[i].style.display = "block";
+        //     });
+        // };
+
         // Fully loaded!
 
         const datval_city2SurfDate = document.getElementById("futureDate");
@@ -25,47 +203,12 @@
         datval_city2SurfDate.addEventListener("change", (event) => {
             city2SurfDateChange();
         });
-    
+
+        document.getElementById("daysCount").innerHTML = getDaysToFutureDate();
+
     });
-// }
-
-// console.log(window.innerWidth);
-// console.log(window.innerHeight);
-// document.getElementById("bodyElement").innerText = window.innerWidth + " x " + window.innerHeight;
-// document.getElementById("headerElement").innerText = window.innerWidth + " x " + window.innerHeight;
-// document.getElementById("mainElement").innerText = window.innerWidth + " x " + window.innerHeight;
-
-// Get the root element
-var r = document.querySelector(':root');
-// Create a function for getting a variable value
-function myFunction_get() {
-    // Get the styles (properties and values) for the root
-        var rs = getComputedStyle(r);
-    // Alert the value of the --blue variable
-        alert("The value of --blue is: " + rs.getPropertyValue('--blue'));
 }
-// Create a function for setting a variable value
-function myFunction_set(){
-    // Set the value of variable --blue to another value (in this case "lightblue")
-        // r.style.setProperty('--blue', 'lightblue');
-        r.style.setProperty('--device_innerWidth', ( window.innerWidth * .95 ) + "px");
-        r.style.setProperty('--device_innerHeight', ( window.innerHeight * .95 ) + "px");
-        // r.style.setProperty('--device_innerWidth', ( window.innerWidth * 1.0 ) + "px");
-        // r.style.setProperty('--device_innerHeight', ( window.innerHeight * 1.0 ) + "px");
-}
-myFunction_set();
-
-function calcStats(){
-    xMinutes = document.getElementById("xMinutes").value * 1;
-    xSeconds = document.getElementById("xSeconds").value * 1;
-    xDistance = document.getElementById("xDistance").value * 1;
-    let vHTML = ``;
-    vHTML += `Run Statistics<br>`;
-    // vHTML += `Pace ${(document.getElementById("xMinutes").value + (document.getElementById("xSeconds").value/60))/document.getElementById("xDistance").value*1000}`;
-    vHTML += `<div>Pace ${((xMinutes + (xSeconds/60))/xDistance*1000).toFixed(4)}</div>`;
-    document.getElementById("runStats").innerHTML = vHTML;
-    // console.log(vHTML);
-}
+// READY STATE end ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // city2SurfDateChange START
 function city2SurfDateChange(){
@@ -210,7 +353,7 @@ function createTable(){
     v_today = v_today.toDateString().slice(0,15);
     var vHTML = ``;
     // vHTML += `<h1>Current training schedule</h1>`;
-    vHTML += `<div class="beanie-heading"><h2>Prep for the City-2-Surf</h2></div>`;
+    vHTML += `<br><br><div class="beanie-heading"><h2>Prep for the City-2-Surf</h2></div>`;
     vHTML += `<table class="training-schedule-table">`;
         vHTML += `<tr>`;
             vHTML += `<th class="training-schedule-row">From: / To:</th>`;
@@ -400,308 +543,3 @@ function createTable(){
     // console.log(vHTML);
     return vHTML;
 }
-const weeklyScheduleHTML = createTable();
-// console.log(weeklyScheduleHTML);
-document.getElementById("weeklySchedule").innerHTML = weeklyScheduleHTML;
-
-function xDistanceUpdate(){
-    document.getElementById("xDistance").value = document.getElementById("ttCourse").value;
-}
-function saveTime(){
-    const myTimeDate = new Date()
-
-    var vDistance = document.getElementById("xDistance").value * 1;
-    vDistance = vDistance.toFixed(3);
-    var vMinutes = document.getElementById("xMinutes").value * 1;
-    vMinutes = vMinutes.toFixed(3);
-    var vSeconds = document.getElementById("xSeconds").value * 1;
-    vSeconds = vSeconds.toFixed(3);
-    var xTimeRecord = document.getElementById("xDate").value + " , " + document.getElementById("ttName").value + " , " + vDistance + " metres" + " , " + vMinutes + " min" + " , " + vSeconds + " sec";
-    // console.log(xTimeRecord);
-    window.localStorage.setItem("TT time recorded on:- " + myTimeDate.toDateString() + " at:- " + myTimeDate.toTimeString().slice(0,8), xTimeRecord);
-
-    // document.getElementById("fName").value = "";
-    // document.getElementById("lName").value = "";
-    document.getElementById("ttName").value = "";
-    document.getElementById("xDistance").value = 0;
-    document.getElementById("xMinutes").value = 0;
-    document.getElementById("xSeconds").value = 0;
-
-    displayTimesHistory();
-}
-function displayTimesHistory(){
-    aTimes = [];
-    for (let i = 0; i < localStorage.length; i++) {
-        // console.log(localStorage.getItem(localStorage.key(i)));
-        aTimes.push(localStorage.getItem(localStorage.key(i)));
-    }
-    aTimes.sort();
-    aTimes.reverse();
-    // console.log(aTimes);
-    var vHTML = ``;
-    for (let i = 0; i < aTimes.length; i++) {
-        vHTML += `${aTimes[i]}<br>`;
-    }
-    // console.log(vHTML);
-    // document.getElementById("timesHistory").innerHTML = vHTML;
-}
-displayTimesHistory();
-function eraseHistory(){
-    aTimes = [];
-    for (let i = 0; i < localStorage.length; i++) {
-        if (localStorage.key(i).substring(0,7) == 'TT time') {
-            aTimes.push(localStorage.key(i));
-        }
-    }
-    for (var i = 0; i < aTimes.length; i++) {
-        localStorage.removeItem(aTimes[i]);
-    }
-    displayTimesHistory();
-}
-
-function emailTimesIn(){
-    let aTimes = [];
-    for (let i = 0; i < localStorage.length; i++) {
-        // console.log(localStorage.getItem(localStorage.key(i)) + " , " + localStorage.key(i) + " , ");
-        aTimes.push(localStorage.getItem(localStorage.key(i)) + " , " + localStorage.key(i) + " , ");
-    }
-    aTimes.sort();
-    aTimes.reverse();
-    // console.log(aTimes);
-    let vTEXT = `Run date: , Name , Distance , Minutes , Seconds , Record date ,%0D%0A`;
-    var vHTML = ``;
-    vHTML += `<div><h2>Turramurra Trotters</h2></div>`;
-    vHTML += `<table>`;
-    vHTML += `<tr>`;
-        vHTML += `<th>Run date:</th>`;
-        vHTML += `<th>Name</th>`;
-        vHTML += `<th>Distance</th>`;
-        vHTML += `<th>Minutes</th>`;
-        vHTML += `<th>Seconds</th>`;
-        vHTML += `<th>Record Date and Time</th>`;
-    vHTML += `</tr>`;
-    let runDate="",runnerName="",runDistance="",runMinutes="",runSeconds="",runRecordedDateTime="";
-    let nStart=0,nEnd=0,nCount=0;
-    for (let i = 0; i < aTimes.length; i++) {
-        vHTML += `<tr>`;
-        vTEXT += aTimes[i] + `%0D%0A`;
-        for (let n1=0; n1 < aTimes[i].length; n1++){
-            if (aTimes[i].slice(n1,n1+3)===" , "){
-                nEnd = n1;
-                switch (nCount){
-                    case 0:
-                        runDate = aTimes[i].slice(nStart,nEnd);
-                        // console.log(nStart, nEnd, runDate);
-                        vHTML += `<td>${runDate}</td>`;
-                        break;
-                    case 1:
-                        runnerName = aTimes[i].slice(nStart,nEnd);
-                        // console.log(nStart, nEnd, runnerName);
-                        vHTML += `<td>${runnerName}</td>`;
-                        break;
-                    case 2:
-                        runDistance = aTimes[i].slice(nStart,nEnd);
-                        // console.log(nStart, nEnd, runDistance);
-                        vHTML += `<td>${runDistance}</td>`;
-                        break;
-                    case 3:
-                        runMinutes = aTimes[i].slice(nStart,nEnd);
-                        // console.log(nStart, nEnd, runMinutes);
-                        vHTML += `<td>${runMinutes}</td>`;
-                        break;
-                    case 4:
-                        runSeconds = aTimes[i].slice(nStart,nEnd);
-                        // console.log(nStart, nEnd, runSeconds);
-                        vHTML += `<td>${runSeconds}</td>`;
-                        break;
-                    case 5:
-                        runRecordedDateTime = aTimes[i].slice(nStart,nEnd);
-                        // console.log(nStart, nEnd, runRecordedDateTime);
-                        vHTML += `<td>${runRecordedDateTime}</td>`;
-                        break;
-                }
-                nStart = nEnd+3;
-                nCount++;
-            }
-        }
-        nStart=0;
-        nCount=0;
-        vHTML += `</tr>`;
-    }
-    vHTML += `</table>`;
-    // console.log(vHTML);
-    // console.log(vTEXT);
-    // for (let i = 0; i < aTimes.length; i++) {
-    //     vHTML += `${aTimes[i]}<br>`;
-    // }
-    var emailSubject = "TT Times";
-    // window.open(`mailto:?subject=${emailSubject}&body=${vHTML}`);
-    // window.open(`mailto:?subject=${emailSubject}&body=${vTEXT}`);
-    window.location.href = "mailto:?subject=" + emailSubject + "&body=" + vTEXT;
-}
-
-function autocomplete(inp, arr) {
-    /*the autocomplete function takes two arguments,
-    the text field element and an array of possible autocompleted values:*/
-    var currentFocus;
-    /*execute a function when someone writes in the text field:*/
-    inp.addEventListener("input", function(e) {
-        var a, b, i, val = this.value;
-        /*close any already open lists of autocompleted values*/
-        closeAllLists();
-        if (!val) { return false;}
-        currentFocus = -1;
-        /*create a DIV element that will contain the items (values):*/
-        a = document.createElement("DIV");
-        a.setAttribute("id", this.id + "autocomplete-list");
-        a.setAttribute("class", "autocomplete-items");
-        /*append the DIV element as a child of the autocomplete container:*/
-        this.parentNode.appendChild(a);
-        /*for each item in the array...*/
-        for (i = 0; i < arr.length; i++) {
-            /*check if the item starts with the same letters as the text field value:*/
-            if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-            /*create a DIV element for each matching element:*/
-            b = document.createElement("DIV");
-            /*make the matching letters bold:*/
-            b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-            b.innerHTML += arr[i].substr(val.length);
-            /*insert a input field that will hold the current array item's value:*/
-            b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-            /*execute a function when someone clicks on the item value (DIV element):*/
-            b.addEventListener("click", function(e) {
-                /*insert the value for the autocomplete text field:*/
-                inp.value = this.getElementsByTagName("input")[0].value;
-                /*close the list of autocompleted values,
-                (or any other open lists of autocompleted values:*/
-                closeAllLists();
-            });
-            a.appendChild(b);
-            }
-        }
-    });
-    /*execute a function presses a key on the keyboard:*/
-    inp.addEventListener("keydown", function(e) {
-        var x = document.getElementById(this.id + "autocomplete-list");
-        if (x) x = x.getElementsByTagName("div");
-        if (e.keyCode == 40) {
-            /*If the arrow DOWN key is pressed,
-            increase the currentFocus variable:*/
-            currentFocus++;
-            /*and and make the current item more visible:*/
-            addActive(x);
-        } else if (e.keyCode == 38) { //up
-            /*If the arrow UP key is pressed,
-            decrease the currentFocus variable:*/
-            currentFocus--;
-            /*and and make the current item more visible:*/
-            addActive(x);
-        } else if (e.keyCode == 13) {
-            /*If the ENTER key is pressed, prevent the form from being submitted,*/
-            e.preventDefault();
-            if (currentFocus > -1) {
-            /*and simulate a click on the "active" item:*/
-            if (x) x[currentFocus].click();
-            }
-        }
-    });
-    function addActive(x) {
-        /*a function to classify an item as "active":*/
-        if (!x) return false;
-        /*start by removing the "active" class on all items:*/
-        removeActive(x);
-        if (currentFocus >= x.length) currentFocus = 0;
-        if (currentFocus < 0) currentFocus = (x.length - 1);
-        /*add class "autocomplete-active":*/
-        x[currentFocus].classList.add("autocomplete-active");
-    }
-    function removeActive(x) {
-        /*a function to remove the "active" class from all autocomplete items:*/
-        for (var i = 0; i < x.length; i++) {
-        x[i].classList.remove("autocomplete-active");
-        }
-    }
-    function closeAllLists(elmnt) {
-        /*close all autocomplete lists in the document,
-        except the one passed as an argument:*/
-        var x = document.getElementsByClassName("autocomplete-items");
-        for (var i = 0; i < x.length; i++) {
-        if (elmnt != x[i] && elmnt != inp) {
-            x[i].parentNode.removeChild(x[i]);
-        }
-        }
-    }
-    /*execute a function when someone clicks in the document:*/
-    document.addEventListener("click", function (e) {
-        closeAllLists(e.target);
-    });
-}
-// /*An array containing all the country names in the world:*/
-// var runnerNames = ["Phil South","Alan Cole","Peter Welch","Les Bryce","John Marshall","Margaret Marchall","Brian Matthes","Lyn Matthews","Ralph Pain","Geoff Russell","Clare Pain","Nick Swan","Allison Lilley"];
-// /*initiate the autocomplete function on the "ttName" element, and pass along the runnerNames array as possible autocomplete values:*/
-// autocomplete(document.getElementById("ttName"), runnerNames);
-
-function userPIN(){
-    const vUserPIN = document.getElementById("userPIN").value;
-    switch(vUserPIN) {
-    case "74192320":
-        /*An array containing all the country names in the world:*/
-        var runnerNames = ["Phil South","Alan Cole","Peter Welch","Les Bryce","John Marshall","Margaret Marchall","Brian Matthes","Lyn Matthews","Ralph Pain","Geoff Russell","Clare Pain","Nick Swan","Allison Lilley"];
-        /*initiate the autocomplete function on the "ttName" element, and pass along the runnerNames array as possible autocomplete values:*/
-        autocomplete(document.getElementById("ttName"), runnerNames);
-        document.getElementById("timesForm").style.display="block";
-        document.getElementById("timesHistoryContainer").style.display="block";
-        document.getElementById("userAccess").style.display="none";
-        document.getElementById("city2surfCountdownWrapper").style.display="none";
-        document.getElementById("weeklySchedule").style.display="none";
-        document.getElementById("headerElement").style.display="none";
-        document.getElementById("bodyElement").style.display="none";
-        break;
-    case "":
-        // /*An array containing all the country names in the world:*/
-        // var runnerNames = [];
-        // /*initiate the autocomplete function on the "ttName" element, and pass along the runnerNames array as possible autocomplete values:*/
-        // autocomplete(document.getElementById("ttName"), runnerNames);
-        // document.getElementById("timesForm").style.display="block";
-        // document.getElementById("timesHistoryContainer").style.display="block";
-        // document.getElementById("userAccess").style.display="none";
-        // document.getElementById("city2surfCountdownWrapper").style.display="none";
-        // document.getElementById("weeklySchedule").style.display="none";
-        // document.getElementById("headerElement").style.display="none";
-        // document.getElementById("bodyElement").style.display="none";
-        // break;
-    default:
-    }
-    document.getElementById("userPIN").value = null;
-} 
-
-function resetZoom(){
-    // var scale = 'scale(1)';
-    // document.body.style.webkitTransform =  scale;    // Chrome, Opera, Safari
-    // document.body.style.msTransform =   scale;       // IE 9
-    // document.body.style.transform = scale;     // General
-}
-
-// document.getElementById("xMinutes").addEventListener("change",calcStats());
-// document.getElementById("xSeconds").addEventListener("change",calcStats());
-// document.getElementById("xDistance").addEventListener("change",calcStats());
-// document.getElementById("ttCourse").addEventListener("change",calcStats());
-// document.getElementById("runStats").addEventListener("mouseover",calcStats());
-// document.getElementById("runStats").addEventListener("touchstart",calcStats());
-
-// // console.log(getFutureDate());
-// var daysToFutureDate = 0;
-// var baseDate = new Date();
-// // console.log(baseDate);
-// daysToFutureDate = document.getElementById("futureDate").value - baseDate;
-document.getElementById("daysCount").innerHTML = getDaysToFutureDate();
-
-window.addEventListener("load", () => {
-    // Fully loaded!
-    // document.getElementById("futureDate").value = getFutureDate();
-});
-
-
-// city2SurfDateChange();
-
-// DON'T FORGET TO DATA VALIDATE FOR ","

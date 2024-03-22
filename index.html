@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<!-- collapse all     Ctrl + k + 0 -->
-<!-- expand all       Ctrl + k + j -->
-<!-- word wrap toggle Alt + z -->
 <html lang="en">
 <head>
 
     <!-- SEO -->
         <title>Turramurra Trotters</title>
         <meta nme="description" content="Turramurra Trotters">
+        <meta name="author" content="Net IT Australia" />
+        <meta name="google" content="nositelinkssearchbox">
+        <meta name="googlebot" content="notranslate">
         <!-- Use meta robots tags only when you want to restrict the way GOOGLE crawls a page; -->
         <meta name="robots" content="index, follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -16,120 +16,407 @@
         <meta name="title" content="Turramurra Trotters: Turramurra Trotters">
     <!-- SEO -->
 
-    <script src="./js/tt.js" type="text/JavaScript" defer></script>
+    <link rel="icon" type="image/png" href="./media/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="./media/favicon.png"/>
 
-    <link rel="stylesheet" href="./css/tt.css" media="all" type="text/css">
+    <link rel="stylesheet" href="./css/turramurra-trotters.css" type="text/css">
+
+    <script type="text/javascript" src="./js/turramurra-trotters.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+    
 </head>
+
 <body>
-    <div id="bodyElement">
-        <div class="preHeader"><h1>Turramurra Trotters, ...running since 1974</h1></div>
-    </div>
+
+<div class="site-content-wrapper">
+
     <header>
-        <!-- <div id="headerElement" class="fb-link"><a href="https://www.facebook.com/TurramurraTrotters"><br>Learn ABOUT US on Facebook<br><br></a></div> -->
-        <div id="headerElement" class="fb-link"><a href="https://www.facebook.com/groups/TurramurraTrottersForum/"><br>Learn ABOUT US on Facebook<br><br></a></div>
+        <div class="entity-name">
+            <h1 style="text-shadow: 2px 2px navy">Turramurra Trotters</h1>
+            <h4>...running since 1974</h4>
+        </div>
+        <div class="header-nav-container">
+            <nav class="header-nav">
+            </nav>
+        </div>
     </header>
-    <main>
-        <div id="mainElement">
-            <div id="contactUs" class="contact-us">
-                <div class="beanie-heading"><h2>Contact Us</h2></div>
-                <table class="table-contact">
-                    <tr class="table-contact">
-                        <td class="table-contact">Alan Cole</td>
-                        <td class="table-contact">0418 229 507</td>
-                    </tr>
-                    <tr class="table-contact">
-                        <td class="table-contact">Peter Welch</td>
-                        <td class="table-contact">0410 834 833</td>
-                    </tr>
-                    <tr class="table-contact">
-                        <td class="table-contact">Les Bryce</td>
-                        <td class="table-contact">0429 813 351</td>
-                    </tr>
+    <main class="site-content-main">
+
+        <section class="marketing-deck-01">
+            <h2>Join us!</h2>
+        </section>
+
+        <!-- <section class="section-flip-tiles"> -->
+            <div class="flip-tiles-container">
+                <!-- RUN -->
+                <div id="flip-tile-1of6" class="flip-tile opacity1">
+                    <div class="flip-tile-inner">
+                        <div class="flip-tile-front">
+                            <img src="./media/run - resized.png" alt="Avatar" style="width:30ch;height:30ch;padding-top:5px;">
+                        </div>
+                        <h2 class="flipH2">Run with us.</h2>
+                        <div class="flip-tile-back">
+                            <h3>Run with us.</h3> 
+                            Choose to run one of our official street circuits, or run your own course/distance. Times are recorded by Alan with PB's tracked and recognised when all runners return to the start/finish line.
+                            <br>
+                            <br>
+                            There are 6 circuits to choose from ranging from 6.5k to 15k. But you can choose to run any distance.
+                        </div>
+                    </div>
+                </div>          
+
+                <!-- WALK -->
+                <div id="flip-tile-2of6" class="flip-tile opacity1">
+                    <div class="flip-tile-inner">
+                        <div class="flip-tile-front">
+                            <img src="./media/walk - inColour.png" alt="Avatar" style="width:30ch;height:30ch;padding-top:5px;">
+                        </div>
+                        <h2 class="flipH2">Walk with us.</h2> 
+                        <div class="flip-tile-back">
+                            <h3>Walk with us.</h3> 
+                            There are 4 circuits to choose from ranging from 2.4k to 7.1k.
+                            <br>
+                            <br>
+                            Walking through the quiet and picturesque streets of Wahroonga and Turramurra, the pace ranges from brisk to not-so-brisk.
+                        </div>
+                    </div>
+                </div>          
+                <!-- CYCLE -->
+
+                <div id="flip-tile-3of6" class="flip-tile opacity1">
+                    <div class="flip-tile-inner">
+                        <div class="flip-tile-front">
+                            <img src="./media/cycling_PNG22.png" alt="Avatar" style="width:30ch;height:30ch;padding-top:5px;">
+                        </div>
+                        <h2 class="flipH2">Cycle with us.</h2> 
+                        <div class="flip-tile-back">
+                            <h3>Cycle with us.</h3> 
+                            Some of our cyclists are ex-runners who have blended in nicely with some very experienced treddlers.
+                            <br>
+                            <br>
+                            Destinations vary and the planning often occurs during the ride! But generally the group will arrive back at the start/finish line before the "meet" is over.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COFFEE -->
+                <div id="flip-tile-4of6" class="flip-tile opacity1">
+                    <div class="flip-tile-inner">
+                        <div class="flip-tile-front">
+                            <img src="./media/coffee - resized.png" alt="Avatar" style="width:30ch;height:30ch;padding-top:5px;">
+                        </div>
+                        <h2 class="flipH2">Do coffee with us.</h2>
+                        <div class="flip-tile-back">
+                            <h3>Coffee with us.</h3> 
+                            Follow the crowd to the "after <del>party</del>/coffee".
+                            <br>
+                            <br>
+                            Here we unwind, discuss our runs/walks/rides, swap notes on injuries and relax.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WHERE -->
+                <div id="flip-tile-5of6" class="flip-tile opacity1">
+                    <div class="flip-tile-inner">
+                        <div class="flip-tile-front">
+                            <!-- <img src="./media/time-equals-money.jpeg" alt="Avatar" style="width:95%;height:auto;padding-top:5px;"> -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.1206369067327!2d151.1257626764964!3d-33.731696511972046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a7c4b6769fd9%3A0xccbbf650c115c69a!2s43%20Rohini%20St%2C%20Turramurra%20NSW%202074!5e0!3m2!1sen!2sau!4v1683082141582!5m2!1sen!2sau" width="300px" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="google-map"></iframe>
+                        </div>
+                        <h2 class="flipH2">Where</h2> 
+                        <div class="flip-tile-back">
+                            <h3>Where</h3> 
+                            Trotters have been meeting in Rohini Street, Turramurra [ opposite Kippling's Garage Bar ] for over 50 years.
+                            <br>
+                            <br>
+                            Just head towards the Turramurra Train Station carpark in Rohini Street and look for people who look like they are ready to run, walk or cycle.
+                            <!-- <div class="google-map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.1206369067327!2d151.1257626764964!3d-33.731696511972046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a7c4b6769fd9%3A0xccbbf650c115c69a!2s43%20Rohini%20St%2C%20Turramurra%20NSW%202074!5e0!3m2!1sen!2sau!4v1683082141582!5m2!1sen!2sau" width="300px" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="google-map"></iframe>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WHEN -->
+                <div id="flip-tile-6of6" class="flip-tile opacity1">
+                    <div class="flip-tile-inner">
+                        <div class="flip-tile-front">
+                            <img src="./media/clock.png" alt="Avatar" style="width:95%;height:auto;padding-top:5px;">
+                        </div>
+                        <h2 class="flipH2">When</h2> 
+                        <div class="flip-tile-back">
+                            <h3>When</h3>
+                            Trotters will start to gather at the start/finish line from around 6:00am each Saturday. New to Trotters?, arrive between 6:15am and 6:25am- ( 15 minutes earlier in summertime ). Scratch is 6:30am ( Walkers start 15 minutes earlier in summertime ).
+                            <br>
+                            <br>
+                            Start time is flexible, Alan keeps track of late and early starters and adjusts their times accordingly.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- </section> -->
+
+        <div class="grid-area-class">
+
+            <div class="grid-item area-01 area opacity1 popup-courses-open">
+                <h2 class="popup-courses-open">Courses</h2>
+                <h3 class="popup-courses-open">...we have been runnig thses routes for decades</h3>
+            </div>
+
+            <div class="grid-item area-02 area opacity1 popup-popular-events-open">
+                <h2 class="popup-popular-events-open">Popular Events</h2>
+                <h3 class="popup-popular-events-open">...you are likely to see Turramurra Trotters at these events</h3>
+            </div>
+
+            <div class="grid-item area-03">
+                <h2>Race Reports</h2>
+                <h3>...coming soon</h3>
+            </div>
+
+            <div class="grid-item area-04 area opacity1 popup-course-records-open">
+                <h2 class="popup-course-records-open">Course Records</h2>
+                <h3 class="popup-course-records-open">...may need uodating?</h3>
+            </div>
+
+            <div class="grid-item area-05 area opacity1 popup-c2s-training-open">
+                <h2 class="popup-c2s-training-open">City-2-Surf Training Program</h2>
+            </div>
+
+            <div class="grid-item area-06">
+                <h2>Our History</h2>
+                <h3>...coming soon</h3>
+            </div>
+
+        </div>
+
+        <!-- popup-courses start -->
+            <div id="popup-courses" class="popup-courses">
+                <div id="popup-courses-close-button" class="popup-courses-close-button">X</div>
+                <br>
+                <div class="centre">
+                    <h2>Courses</h2>
+                    <div class="centre">
+                        <ul>
+                            <li>6.5k Run</li>
+                            <li>8.6k Run</li>
+                            <li>10.2k Run</li>
+                            <li>12.0k Run</li>
+                            <li>14.0k Run</li>
+                            <li>15.1k Run</li>
+                            <li>7.1k Walk</li>
+                            <li>5.8k Walk</li>
+                            <li>3.6k Walk</li>
+                            <li>2.4k Walk</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        <!-- popup-courses end -->
+
+        <!-- popup-popular-events start -->
+            <div id="popup-popular-events" class="popup-popular-events">
+                <div id="popup-popular-events-close-button" class="popup-popular-events-close-button">X</div>
+                <table class="events-table">
+                    <tr><th>Date(s)</th><th>Day(s)</th><th>Event Name</th><th>Distances</th><th>Comments</th><th>event date confirmed on</th><th>URL</th></tr>
+                    <tr><td>1-Jan-2024</td><td>Sat</td><td>Beyond the Black Stump</td><td>16k / 33k / 8k Walk</td><td>A tradidional New Years Day run</td><td>Mon 15 May 2023</td><td><a href="https://www.runningcalendar.com.au/event/beyond-the-black-stump/">www</td></tr>
+                    <tr><td>9-10 Mar 2024</td><td>Sat - Sun</td><td>Orange Running Festival</td><td>1mile / 5k / 10k / 21k / 42k</td><td>40 Trotters in 1974</td><td>Mon 15 May 2023</td><td><a href="https://www.orangerunningfestival.com.au/">www</td></tr>
+                    <tr><td>9-Mar-2024</td><td>Sat</td><td>Six Foot Track</td><td>45k</td><td>A great event</td><td>Mon 15 May 2023</td><td><a href="https://www.sixfoot.com/">www</td></tr>
+                    <tr><td>14 Apr 2024 tbc</td><td>Sun</td><td>Canberra Marathon</td><td>Kids 2K / 5.4K / 10K / 21k / 42k</td><td>Watch out for early bird discounts</td><td>to be confirmed</td><td><a href="https://solemotive.com/pages/canberra-times-marathon-festival">www</td></tr>
+                    <tr><td>25-Apr-2024</td><td>Thu</td><td>TT Anzac Day Run</td><td>20k</td><td>Run back from Dawn Service</td><td>Mon 15 May 2023</td><td><a href="https://www.turramurratrotters.org">www</td></tr>
+                    <tr><td>5 May 2024 tbc</td><td>Sun</td><td>Manly Rotary Fun Run</td><td>2k / 5k / 10k</td><td>possible sightings of Peter Welch</td><td>Mon 15 May 2023</td><td><a href="https://www.manlyfunrun.org/">www</td></tr>
+                    <tr><td>9 - 12 May 2024 tbc</td><td>Thu - Sun</td><td>Ultra-Trail Australia</td><td>1k / 11 / 22 / 50k / 100k</td><td>Tough runs</td><td>Mon 15 May 2023</td><td><a href="https://www.ultratrailaustralia.com.au/">www</td></tr>
+                    <tr><td>21-May-2023</td><td>Sun</td><td>SMH Half Marathon</td><td>21k</td><td>The classic half!</td><td>Mon 15 May 2023</td><td><a href="https://smhhalfmarathon.com.au/">www</td></tr>
+                    <tr><td>28-May-2023</td><td>Sun</td><td>Lindfield Fun Run</td><td>2k / 5k / 10k</td><td>A Trotters tradional run</td><td>Mon 15 May 2023</td><td><a href="https://lindfieldfunrun.org.au/">www</td></tr>
+                    <tr><td>4-Jun-2023</td><td>Sun</td><td>The Great NOSH Footrace</td><td>16k / 22k</td><td>by Orienteering NSW</td><td>Mon 15 May 2023</td><td><a href="https://thegreatnoshfootrace.com.au/">www</td></tr>
+                    <tr><td>18-Jun-2023</td><td>Sun</td><td>Ku-ring-gai Chase Fun Run</td><td>2k / 5k / 10k</td><td>A charity run</td><td>Mon 15 May 2023</td><td><a href="https://tkcfunrun.org.au/wp/">www</td></tr>
+                    <tr><td>tbc</td><td>tbc</td><td>Western Sydney Marathon</td><td>10k / 21k / 42k</td><td>…check their website</td><td>Mon 15 May 2023</td><td><a href="https://www.westernsydneymarathon.com.au/">www</td></tr>
+                    <tr><td>1 - 2 Jul 2023</td><td>Sat - Sun</td><td>Gold Coast Marathon</td><td>2k / 4k / 5k / 10k / 21k / 42k / 63.3k 2 day</td><td>Ask Richard who has run 5! Marathons that is not k's.</td><td>Mon 15 May 2023</td><td><a href="https://goldcoastmarathon.com.au/">www</td></tr>
+                    <tr><td>16-Jul-2023</td><td>Sun</td><td>Winery Running Festival</td><td>2k / 5k / 10.5k / 21k / 42k</td><td>The marathon is back</td><td>Mon 15 May 2023</td><td><a href="https://wineryrun.com/">www</td></tr>
+                    <tr><td>cancelled for 2023</td><td>n/a</td><td>Westlink M7 Marathon</td><td>5k / 10k / 21k / 42k</td><td>Great course</td><td>Mon 15 May 2023</td><td><a href="https://www.blacktown.nsw.gov.au/Events-and-activities/Westlink-M7-Blacktown-Running-Festival">www</td></tr>
+                    <tr><td>13-Aug-2022</td><td>Sun</td><td>City to Surf</td><td>14k</td><td>Our biggest Event of the year!</td><td>Mon 15 May 2023</td><td><a href="https://city2surf.com.au/">www</td></tr>
+                    <tr><td>27-Aug-2023</td><td>Sun</td><td>Pub-2-Pub aka Beach-2-Beach</td><td>3k / 6k / 13k</td><td>13k is a Michael Fortune favourite</td><td>Mon 15 May 2023</td><td><a href="https://beach2beach.com.au/">www</td></tr>
+                    <tr><td>tbc</td><td>tbc</td><td>Bilpin Fun Run (Willy2Billy)</td><td>16.77k / 31.45k</td><td>…check their website</td><td>Mon 15 May 2023</td><td><a href="http://www.bilpinbushrun.com.au/">www</td></tr>
+                    <tr><td>tbc</td><td>tbc</td><td>SAN Fun Run</td><td>5k / 10k</td><td>…check their website</td><td>Mon 15 May 2023</td><td><a href="https://www.sah.org.au/run-for-life">www</td></tr>
+                    <tr><td>tbc</td><td>tbc</td><td>Walk(Run) to Work Day</td><td>…</td><td>…check their website</td><td>Mon 15 May 2023</td><td><a href="https://www.walk.com.au/WTW/homepage.asp">www</td></tr>
+                    <tr><td>17-Sep-2023</td><td>Sun</td><td>Abbott World Marathon Majors Candidate Race (previously Blackmores Running Festival)</td><td>3.5k / 10k / 21.095k / 42.195k</td><td>a favourite of Les</td><td>Mon 15 May 2023</td><td><a href="https://sydneyrunningfestival.com.au/">www</td></tr>
+                    <tr><td>22-Oct-2023</td><td>Sun</td><td>7 Bridges Walk Cancer Council event</td><td>28k</td><td>See Sydney on Foot</td><td>Mon 15 May 2023</td><td><a href="https://www.7bridgeswalk.com.au/">www</td></tr>
+                    <tr><td>22-Oct-2023</td><td>Sun</td><td>Mt Panorama Punish</td><td>6.2k (elevation gain 174m ?)</td><td>One hot lap around Mt Panorama</td><td>Mon 15 May 2023</td><td><a href="http://panoramapunish.com/">www</td></tr>
+                    <tr><td>4 - 5 Nov 2023</td><td>tbc</td><td>Carcoar Cup Running Festival</td><td>…</td><td>…check their website</td><td>Mon 15 May 2023</td><td><a href="https://www.carcoar.com.au/news-events/carcoar-cup-running-festival">www</td></tr>
+                    <tr><td>18-19 Nov 2023</td><td>Sat - Sun</td><td>Stromlo Running Festival</td><td>5k / 10k /15k / 30k / 50k</td><td>Hosted by Rob de Castella</td><td>Mon 15 May 2023</td><td><a href="https://stromlorunningfestival.com.au/">www</td></tr>
+                    <tr><td>tbc</td><td>tbc</td><td>Central Coast Half</td><td>10k / 21.1k</td><td>Check with Martin Smith</td><td>Mon 15 May 2023</td><td><a href="https://www.runningcalendar.com.au/event/central-coast-half-marathon/">www</td></tr>
                 </table>
             </div>
-            <br>
-            <div id="weeklySchedule" class="weekly-schedule"></div>
-            <br>
-            <div id="city2surfCountdownWrapper">
-                <div class="beanie-heading"><h2>City-2-Surf Countdown</h2></div>
-                <div id="city2surfCountdown" class="city-2-surf-countdown">
-                    <label for="futureDate">City-2-Surf Date:</label><br>
-                    <input type="date" id="futureDate" DOonchange="countToFutureDate()" name="futureDate"><br>
-                    <div id="daysCount">sgfsd augsdi</div>
-                </div>
+        <!-- popup-popular-events end -->
+
+        <!-- popup-course-records start -->
+            <div id="popup-course-records" class="popup-course-records">
+                <div id="popup-course-records-close-button" class="popup-course-records-close-button">X</div>
+                <table width="700" border="1" cellspacing="1" cellpadding="1" bgcolor="lightblue">
+                    <caption><span style="color:#00008b;font-size:small;"><em>The Trotters’ Records</em></span><em></em></caption>
+                    <tbody>
+                    <tr>
+                    <th><span style="color:black;font-size:small;">Course</span></th>
+                    <th><span style="color:blue;font-size:small;">Fastest</span></th>
+                    <th><span style="color:blue;font-size:small;">Time</span></th>
+                    <th><span style="color:blue;font-size:x-small;">Year</span></th>
+                    <th><span style="color:#8b0000;font-size:small;">Second</span></th>
+                    <th><span style="color:#8b0000;font-size:small;">Time</span></th>
+                    <th><span style="color:#8b0000;font-size:small;">Year</span></th>
+                    <th><span style="color:#006400;font-size:small;">Third</span></th>
+                    <th><span style="color:#006400;font-size:small;">Time</span></th>
+                    <th><span style="color:#006400;font-size:small;">Year</span></th>
+                    </tr>
+                    <tr>
+                    <td><span style="color:black;font-size:small;">6.5 kms</span></td>
+                    <td><span style="color:blue;font-size:small;">Quinton Morley</span></td>
+                    <td><span style="color:blue;font-size:small;">20:01</span></td>
+                    <td><span style="color:blue;font-size:small;">1984</span></td>
+                    <td><span style="color:#8b0000;font-size:small;">Bernard Corden</span></td>
+                    <td><span style="color:#8b0000;font-size:small;">20:28</span></td>
+                    <td><span style="color:#8b0000;font-size:small;">1984</span></td>
+                    <td><span style="color:#006400;font-size:small;">Evan Fountain</span></td>
+                    <td><span style="color:#006400;font-size:small;">21:39</span></td>
+                    <td><span style="color:#006400;font-size:small;">1997</span></td>
+                    </tr>
+                    <tr>
+                    <td><span style="color:black;font-size:small;">8.6 kms</span></td>
+                    <td><span style="color:blue;font-size:small;">Quinton Morley</span></td>
+                    <td><span style="color:blue;font-size:small;">27:07</span></td>
+                    <td><span style="color:blue;font-size:small;">1985</span></td>
+                    <td><span style="color:#8b0000;font-size:small;">Steve Pollard</span></td>
+                    <td><span style="color:#8b0000;font-size:small;">28:08</span></td>
+                    <td><span style="color:#8b0000;font-size:small;">1982</span></td>
+                    <td><span style="color:#006400;font-size:small;">Keith Canard</span></td>
+                    <td><span style="color:#006400;font-size:small;">29:19</span></td>
+                    <td><span style="color:#006400;font-size:small;">1983</span></td>
+                    </tr>
+                    <tr>
+                    <td><span style="color:black;font-size:small;">10.2kms</span></td>
+                    <td><span style="color:blue;font-size:small;">Quinton Morley</span></td>
+                    <td><span style="color:blue;font-size:small;">31:50</span></td>
+                    <td><span style="color:blue;font-size:small;">1984</span></td>
+                    <td><span style="color:#8b0000;font-size:small;">Andrew Spilling</span></td>
+                    <td><span style="color:#8b0000;font-size:small;">32:56</span></td>
+                    <td><span style="color:#8b0000;font-size:small;">1978</span></td>
+                    <td><span style="color:#006400;font-size:small;">Steve Pollard</span></td>
+                    <td><span style="color:#006400;font-size:small;">33:44</span></td>
+                    <td><span style="color:#006400;font-size:small;">1982</span></td>
+                    </tr>
+                    <tr>
+                    <td><span style="color:black;font-size:small;">12.0kms</span></td>
+                    <td><span style="color:blue;font-size:small;">Quinton Morley</span></td>
+                    <td><span style="color:blue;font-size:small;">38:18</span></td>
+                    <td><span style="color:blue;font-size:small;">1980</span></td>
+                    <td><span style="color:#8b0000;font-size:small;">Robert Spilling</span></td>
+                    <td><span style="color:#8b0000;font-size:small;">38:23</span></td>
+                    <td><span style="color:#8b0000;font-size:small;">1977</span></td>
+                    <td><span style="color:#006400;font-size:small;">Steve Pollard</span></td>
+                    <td><span style="color:#006400;font-size:small;">39:43</span></td>
+                    <td><span style="color:#006400;font-size:small;">1983</span></td>
+                    </tr>
+                    <tr>
+                    <td><span style="color:black;font-size:small;">14.0kms</span></td>
+                    <td><span style="color:blue;font-size:small;">Keith Canard</span></td>
+                    <td><span style="color:blue;font-size:small;">48:30</span></td>
+                    <td><span style="color:blue;font-size:small;">1979&nbsp;</span></td>
+                    <td><span style="color:#8b0000;font-size:small;">Brian Preston</span></td>
+                    <td><span style="color:#8b0000;font-size:small;">48:48</span></td>
+                    <td><span style="color:#8b0000;font-size:small;">1979</span></td>
+                    <td><span style="color:#006400;font-size:small;">John Waddington</span></td>
+                    <td><span style="color:#006400;font-size:small;">49:22</span></td>
+                    <td><span style="color:#006400;font-size:small;">1980</span></td>
+                    </tr>
+                    <tr>
+                    <td><span style="color:black;font-size:small;">15.1kms</span></td>
+                    <td><span style="color:blue;font-size:small;">Quinton Morley</span></td>
+                    <td><span style="color:blue;font-size:small;">52:12</span></td>
+                    <td><span style="color:blue;font-size:small;">1979</span></td>
+                    <td><span style="color:#8b0000;font-size:small;">Steve Pollard</span></td>
+                    <td><span style="color:#8b0000;font-size:small;">52:13</span></td>
+                    <td><span style="color:#8b0000;font-size:small;">1981</span></td>
+                    <td><span style="color:#006400;font-size:small;">Keith Canard</span></td>
+                    <td><span style="color:#006400;font-size:small;">52:27</span></td>
+                    <td><span style="color:#006400;font-size:small;">1979</span></td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
-            <br>
-            <input type="date" id="xDate" onfocus="resetZoom()" name="xDate" style="visibility:hidden"><br>
-            <!-- <div class="beanie-heading"><h2>Record Times</h2></div> -->
-            <!-- <div id="recordTimes" class="record-times">
+        <!-- popup-course-records end -->
 
-                <div id="userAccess">
-                    <label for="userPIN">User PIN:</label><br>
-                    <input type="text" pattern="\d*" id="userPIN" name="userPIN"><button onfocus="resetZoom()" onclick="userPIN()">OK</button><br>
-                </div>
-
-                <form id="timesForm" class="times-form" autocomplete="off" style="text-align: center;" action="">
-
-                    <label for="ttName">Trotter name:</label><br>
-                    <input id="ttName" type="text" name="ttName" onfocus="resetZoom()" placeholder="Trotter name"><br>
-
-                    <label for="xMinutes">Minutes:</label><br>
-                    <input type="number" pattern="\d*" id="xMinutes" onfocus="resetZoom()" onblur="calcStats()" onchange="calcStats()" name="xMinutes"><br>
-
-                    <label for="xSeconds">Seconds:</label><br>
-                    <input type="number" pattern="\d*" id="xSeconds" onfocus="resetZoom()" onblur="calcStats()" onchange="calcStats()" name="xSeconds"><br>
-
-                    <label for="ttCourse">Choose a distance:</label>
-                    <select id="ttCourse" name="ttCourse" onfocus="resetZoom()" onblur="calcStats()" onchange="calcStats()" oninput="xDistanceUpdate()">
-                        <option value="0">?</option>
-                        <option value="6500">6.5km</option>
-                        <option value="8600">8.6km</option>
-                        <option value="10200">10.2km</option>
-                        <option value="12000">12.0km</option>
-                        <option value="14000">14.0km</option>
-                        <option value="15100">15.1km</option>
-                        <option value="7200">7.2km walk</option>
-                    </select><br>
-
-                    <label for="xDistance">Other distance (metres):</label><br>
-                    <input type="number" pattern="\d*" id="xDistance" onfocus="resetZoom()" onblur="calcStats()" onchange="calcStats()" name="xDistance"><br>
-
-                    <div id="runStats" class="run-stats" onclick="calcStats()">Run Statistics<br></div><br>
-
-                    <label for="xDate">Date:</label><br>
-                    <input type="date" id="xDate" onfocus="resetZoom()" name="xDate"><br>
+        <!-- popup-c2s-training-program start -->
+            <div id="popup-c2s-training" class="popup-c2s-training">
+                <div id="popup-c2s-training-close-button" class="popup-c2s-training-close-button">X</div>
+                <div class="centre">
+                    <h2>City-2-Surf Training Program</h2>
+                    <div id="weeklySchedule" class="weekly-schedule"></div>
                     <br>
-
-                    <input type="button" onclick="saveTime()" value="Save">
-
-                </form>
+                </div>
+                <div id="city2surfCountdownWrapper"  class="x-centre">
+                    <div class="beanie-heading" centre><h2>City-2-Surf Countdown</h2></div>
+                    <div id="city2surfCountdown" class="city-2-surf-countdown centre">
+                        <form>
+                            <label for="futureDate">City-2-Surf Date:</label><br>
+                            <input type="date" id="futureDate" DOonchange="countToFutureDate()" name="futureDate"><br>
+                            <div id="daysCount"></div>
+                        </form>
+                    </div>
+                </div>
+                <br>
+                <input type="date" id="xDate" onfocus="resetZoom()" name="xDate" style="visibility:hidden"><br>
             </div>
-            <div id="timesHistoryContainer" class="times-history-container">
-                <div class="beanie-heading"><h2>Times History</h2></div>
-                <div id="timesHistory" class="times-history"></div>
-                <br><button onclick="emailTimesIn()" id="emailTimesHistoryButton" class="email-times-history-button">email times in</button><br>
-                <br><button onclick="eraseHistory()" id="eraseTimesHistoryButton" class="erase-times-history-button">erase times history</button><br>
-            </div>
-            <br> -->
-        </div>
+        <!-- popup-c2s-training-program end -->
+
+
     </main>
-    <footer>
-        <br>
-        <div>&copy Turramurra Trotters</div>
-        <div>Web site by Net IT Australia</div>
-        <div>2024-02-13 21:30</div>
-        <br>
-    </footer>
+
+</div>
+
+<footer>
+    <div class="footer-wrapper">
+        <div id="copyright-notice">
+        </div>
+        <div>
+
+            <table class="table-contact">
+                <tr class="table-contact-row">
+                    <td class="table-contact-cell">Alan Cole</td>
+                    <td class="table-contact-cell">0418 229 507</td>
+                    <td class="table-contact-cell"><a href="mailto:alancole@outlook.com">AlanCole@Outlook.com</a></td>
+                </tr>
+                <tr class="table-contact-row">
+                    <td class="table-contact-cell">Peter Welch</td>
+                    <td class="table-contact-cell">0410 834 833</td>
+                </tr>
+                <tr class="table-contact-row">
+                    <td class="table-contact-cell">Les Bryce</td>
+                    <td class="table-contact-cell">0429 813 351</td>
+                </tr>
+            </table>
+
+        </div>
+        <div>
+
+        </div>        
+    </div>
+    <!-- SEO -->
+        <h1 class="mySEOelement">Web Developer.  Web Sites.  Web Apps.  Web Applications.</h1>
+        <a  class="mySEOelement" href="https://www.netit.com.au"></h1>
+        <a  class="mySEOelement" href="https://netit.com.au"></h1>
+    <!-- SEO -->
+</footer>
 
     <script>
-        // DON'T FORGET TO DATA VALIDATE FOR ","
+
+       populateCopyrightNotice();
+
     </script>
+
 </body>
 </html>
