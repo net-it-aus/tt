@@ -28,7 +28,9 @@
     // var dt1 = dt.toLocaleString().slice(6,10);
     var dt1 = dt.getFullYear();
     // document.getElementById("copyright-notice").innerHTML =  `<span class="material-icons material-icons">copyright</span><br>&copy all rights reserved 2019-${dt1}`;
-    document.getElementById("copyright-notice").innerHTML =  '<span class="material-icons material-icons">copyright</span><br>&copy Net IT Australia ' + dt1;
+    // document.getElementById("copyright-notice").innerHTML =  '<span class="material-icons material-icons">copyright</span><br>&copy Net IT Australia ' + dt1;
+    document.getElementById("copyright-notice").innerHTML =  '&copy Turramurra Trotters ' + dt1;
+    document.getElementById("copyright-notice").innerHTML +=  '<br><span style="font-size:0.8em">(Web site by Net IT Australia)</span>';
   }
   
 //   function addEventListeners(){
