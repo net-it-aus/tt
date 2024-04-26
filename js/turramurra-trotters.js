@@ -125,105 +125,115 @@ else {
         // Fully loaded!
         // console.log(`window.addEventListener("load") completed`);
 
-            var myBody = document.getElementsByTagName("BODY")[0];
-            myBody.addEventListener("mousemove",(event)=>{
-                logSiteVisit();
-            },{once: true});
-            myBody.addEventListener("touchstart",(event)=>{
-                logSiteVisit();
-            },{once: true});
-            function logSiteVisit(){
-                console.log("mousemove detected");
-                // // GEOLOCATION start
-                //     function getLocation() {
-                //         if (navigator.geolocation) {
-                //             navigator.geolocation.getCurrentPosition(showPosition);
-                //         } else {
-                //             // x.innerHTML = "Geolocation is not supported by this browser.";
-                //             console.log("Geolocation is not supported by this browser.");
-                //         }
-                //     }
-                //     getLocation();
-                //     function showPosition(position) {
-                //         // x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
-                //         console.log("Latitude: " + position.coords.latitude + "\nLongitude: " + position.coords.longitude);
-                //     }
-                // // GEOLOCATION end
-                // IPADDRESS start
-                    // // external source START
-                    //     fetch('https://api.ipify.org/?format=json')
-                    //     .then(res => res.json())
-                    //     .then(data => console.log(data.ip))
-                    //     .catch(err => console.log(err))
-                    // // external source END
-                    // mySERVER start
-                        fetch('https://netit.com.au/myIPify_TT');
-                    // mySERVER end
-                // IPADDRESS end
-                // triggerSiteVisit();
-            }
-        
+        var myBody = document.getElementsByTagName("BODY")[0];
+        myBody.addEventListener("mousemove",(event)=>{
+            logSiteVisit();
+        },{once: true});
+        myBody.addEventListener("touchstart",(event)=>{
+            logSiteVisit();
+        },{once: true});
+        function logSiteVisit(){
+            console.log("mousemove detected");
+            // // GEOLOCATION start
+            //     function getLocation() {
+            //         if (navigator.geolocation) {
+            //             navigator.geolocation.getCurrentPosition(showPosition);
+            //         } else {
+            //             // x.innerHTML = "Geolocation is not supported by this browser.";
+            //             console.log("Geolocation is not supported by this browser.");
+            //         }
+            //     }
+            //     getLocation();
+            //     function showPosition(position) {
+            //         // x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+            //         console.log("Latitude: " + position.coords.latitude + "\nLongitude: " + position.coords.longitude);
+            //     }
+            // // GEOLOCATION end
+            // IPADDRESS start
+                // // external source START
+                //     fetch('https://api.ipify.org/?format=json')
+                //     .then(res => res.json())
+                //     .then(data => console.log(data.ip))
+                //     .catch(err => console.log(err))
+                // // external source END
+                // mySERVER start
+                    fetch('https://netit.com.au/myIPify_TT');
+                // mySERVER end
+            // IPADDRESS end
+            // triggerSiteVisit();
+        }
 
         document.body.addEventListener('click', function (evt) {
 
-            if (evt.target.classList.contains("popup-courses-open")) {
-                // console.log(evt.target);
-                // if(document.getElementById("popup-courses").style.display === "block"){
-                //     document.getElementById("popup-courses").style.display = "none";
-                // } else {
-                    document.getElementById("popup-courses").style.display = "block";
-                    document.getElementById("popup-courses-close-button").style.display = "inline-block";
-                // }
-            }
-            // if (evt.target.classList.contains("popup-courses-close")) {
-            //     console.log(evt.target);
-            //     // if(document.getElementById("popup-courses").style.display === "block"){
-            //         document.getElementById("popup-courses").style.display = "none";
-            //         document.getElementById("popup-courses-close-button").style.display = "none";
-            //     // } else {
-            //     //     document.getElementById("popup-courses").style.display = "block";
-            //     //     document.getElementById("popup-courses-close-button").style.display = "block";
-            //     // }
-            // }
-            document.getElementById("popup-courses-close-button").addEventListener("click", function (evt) {
-                document.getElementById("popup-courses").style.display = "none";
-                document.getElementById("popup-courses-close-button").style.display = "none";
-            })
+            console.log(evt.target);
 
+            // 1
+            if (evt.target.classList.contains("popup-courses-open")) {
+                    document.getElementById("popup-courses").style.display = "block";
+                    // document.getElementById("popup-courses").classList.add("fade-in-element");
+                    document.getElementById("popup-courses-close-button").style.display = "inline-block";
+            }
+
+            // 2
             if (evt.target.classList.contains("popup-popular-events-open")) {
-                // console.log(evt.target);
                 document.getElementById("popup-popular-events").style.display = "block";
                 document.getElementById("popup-popular-events-close-button").style.display = "inline-block";
             }
-            document.getElementById("popup-popular-events-close-button").addEventListener("click", function (evt) {
-                document.getElementById("popup-popular-events").style.display = "none";
-                document.getElementById("popup-popular-events-close-button").style.display = "none";
-            })
 
+            // 3
+            if (evt.target.classList.contains("popup-race-reports-open")) {
+                alert("...coming soon");
+                // document.getElementById("popup-race-reports").style.display = "block";
+                // document.getElementById("popup-race-reports-close-button").style.display = "inline-block";
+            }
+
+            // 4
             if (evt.target.classList.contains("popup-course-records-open")) {
-                // console.log(evt.target);
                 document.getElementById("popup-course-records").style.display = "block";
                 document.getElementById("popup-course-records-close-button").style.display = "inline-block";
             }
-            document.getElementById("popup-course-records-close-button").addEventListener("click", function (evt) {
-                document.getElementById("popup-course-records").style.display = "none";
-                document.getElementById("popup-course-records-close-button").style.display = "none";
-            })
 
+            // 5
             if (evt.target.classList.contains("popup-c2s-training-open")) {
-                // console.log(evt.target);
                 const weeklyScheduleHTML = createTable();
                 // console.log(weeklyScheduleHTML);
                 document.getElementById("weeklySchedule").innerHTML = weeklyScheduleHTML;
                 document.getElementById("popup-c2s-training").style.display = "block";
                 document.getElementById("popup-c2s-training-close-button").style.display = "inline-block";
             }
-            document.getElementById("popup-c2s-training-close-button").addEventListener("click", function (evt) {
-                document.getElementById("popup-c2s-training").style.display = "none";
-                document.getElementById("popup-c2s-training-close-button").style.display = "none";
-            })
+
+            // 6
+            if (evt.target.classList.contains("popup-our-history-open")) {
+                alert("...coming soon");
+                // document.getElementById("popup-our-history").style.display = "block";
+                // document.getElementById("popup-our-history-close-button").style.display = "inline-block";
+            }
 
         }, false);
+        document.getElementById("popup-courses-close-button").addEventListener("click", function (evt) {
+            document.getElementById("popup-courses").style.display = "none";
+            document.getElementById("popup-courses-close-button").style.display = "none";
+        });
+        document.getElementById("popup-popular-events-close-button").addEventListener("click", function (evt) {
+            document.getElementById("popup-popular-events").style.display = "none";
+            document.getElementById("popup-popular-events-close-button").style.display = "none";
+        });
+        // document.getElementById("popup-race-reports-close-button").addEventListener("click", function (evt) {
+        //     document.getElementById("popup-race-reports").style.display = "none";
+        //     document.getElementById("popup-race-reports-close-button").style.display = "none";
+        // });
+        document.getElementById("popup-course-records-close-button").addEventListener("click", function (evt) {
+            document.getElementById("popup-course-records").style.display = "none";
+            document.getElementById("popup-course-records-close-button").style.display = "none";
+        });
+        document.getElementById("popup-c2s-training-close-button").addEventListener("click", function (evt) {
+            document.getElementById("popup-c2s-training").style.display = "none";
+            document.getElementById("popup-c2s-training-close-button").style.display = "none";
+        });
+        // document.getElementById("popup-our-history-close-button").addEventListener("click", function (evt) {
+        //     document.getElementById("popup-our-history").style.display = "none";
+        //     document.getElementById("popup-our-history-close-button").style.display = "none";
+        // });
 
         // let myElements;
         // myElements = document.getElementsByClassName("popup-courses-button");

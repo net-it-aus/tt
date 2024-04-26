@@ -678,3 +678,43 @@ address > div > a{
     flex-direction: column;
     align-items: center;
 }
+
+
+.popup-courses-open{
+    cursor:pointer;
+}
+.popup-popular-events-open{
+    cursor:pointer;
+}
+.popup-race-reports-open{
+    cursor:pointer;
+}
+.popup-course-records-open{
+    cursor:pointer;
+}
+.popup-course-records-open{
+    cursor:pointer;
+}
+.popup-c2s-training-open{
+    cursor:pointer;
+}
+.popup-our-history-open{
+    cursor:pointer;
+}
+
+.exit-button{
+    position:fixed;
+    top:0;
+    right:0;
+    width:50px;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.fade-in-element {
+    animation:fadeInElement 1s;
+}
+@keyframes fadeInElement {
+    0%{opacity:0};
+    100%{opacity:1};
+}
