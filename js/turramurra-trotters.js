@@ -97,11 +97,6 @@
 //   }
 
   
-// window.addEventListener("load", () => {
-//     document.getElementById("area-01-button").addEventListener("click", (event) => {
-//         document.getElementById("popup-courses").style.display = "block";
-//     });
-// });
 // READY STATE start ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 if(document.readyState === "complete") {
     // Fully loaded!
@@ -165,32 +160,43 @@ else {
 
         document.body.addEventListener('click', function (evt) {
 
-            console.log(evt.target);
+            // console.log(evt.target);
 
             // 1
             if (evt.target.classList.contains("popup-courses-open")) {
-                    document.getElementById("popup-courses").style.display = "block";
-                    // document.getElementById("popup-courses").classList.add("fade-in-element");
-                    document.getElementById("popup-courses-close-button").style.display = "inline-block";
+                document.getElementById("popup-courses").style.display = "block";
+                document.getElementById("home-screen-marketing-deck").style.display = "none";
+                document.getElementById("home-screen-flip-tiles").style.display = "none";
+                document.getElementById("home-screen-grid-area").style.display = "none";
             }
 
             // 2
             if (evt.target.classList.contains("popup-popular-events-open")) {
                 document.getElementById("popup-popular-events").style.display = "block";
-                document.getElementById("popup-popular-events-close-button").style.display = "inline-block";
+                document.getElementById("home-screen-marketing-deck").style.display = "none";
+                document.getElementById("home-screen-flip-tiles").style.display = "none";
+                document.getElementById("home-screen-grid-area").style.display = "none";
+                const e = document.getElementsByClassName("my-header");
+                // console.log(e);
+                for (i = 0; i < e.length; i++){
+                    // e[i].style.height = 0;
+                    // e[i].style.display = "none";
+                    e[i].classList.add("my-header-hidden");
+                }
             }
 
             // 3
             if (evt.target.classList.contains("popup-race-reports-open")) {
                 alert("...coming soon");
                 // document.getElementById("popup-race-reports").style.display = "block";
-                // document.getElementById("popup-race-reports-close-button").style.display = "inline-block";
             }
 
             // 4
             if (evt.target.classList.contains("popup-course-records-open")) {
                 document.getElementById("popup-course-records").style.display = "block";
-                document.getElementById("popup-course-records-close-button").style.display = "inline-block";
+                document.getElementById("home-screen-marketing-deck").style.display = "none";
+                document.getElementById("home-screen-flip-tiles").style.display = "none";
+                document.getElementById("home-screen-grid-area").style.display = "none";
             }
 
             // 5
@@ -199,7 +205,9 @@ else {
                 // console.log(weeklyScheduleHTML);
                 document.getElementById("weeklySchedule").innerHTML = weeklyScheduleHTML;
                 document.getElementById("popup-c2s-training").style.display = "block";
-                document.getElementById("popup-c2s-training-close-button").style.display = "inline-block";
+                document.getElementById("home-screen-marketing-deck").style.display = "none";
+                document.getElementById("home-screen-flip-tiles").style.display = "none";
+                document.getElementById("home-screen-grid-area").style.display = "none";
             }
 
             // 6
@@ -212,11 +220,22 @@ else {
         }, false);
         document.getElementById("popup-courses-close-button").addEventListener("click", function (evt) {
             document.getElementById("popup-courses").style.display = "none";
-            document.getElementById("popup-courses-close-button").style.display = "none";
+            document.getElementById("home-screen-marketing-deck").style.display = "block";
+            document.getElementById("home-screen-flip-tiles").style.display = "block";
+            document.getElementById("home-screen-grid-area").style.display = "block";
+            document.getElementById("popup-courses").scrollIntoView();
         });
         document.getElementById("popup-popular-events-close-button").addEventListener("click", function (evt) {
             document.getElementById("popup-popular-events").style.display = "none";
-            document.getElementById("popup-popular-events-close-button").style.display = "none";
+            document.getElementById("home-screen-marketing-deck").style.display = "block";
+            document.getElementById("home-screen-flip-tiles").style.display = "block";
+            document.getElementById("home-screen-grid-area").style.display = "block";
+            const e = document.getElementsByClassName("my-header");
+            for (i = 0; i < e.length; i++){
+                // e[i].style.height = "unset";
+                e[i].classList.remove("my-header-hidden");
+            }
+            document.getElementById("popup-popular-events").scrollIntoView();
         });
         // document.getElementById("popup-race-reports-close-button").addEventListener("click", function (evt) {
         //     document.getElementById("popup-race-reports").style.display = "none";
@@ -224,11 +243,18 @@ else {
         // });
         document.getElementById("popup-course-records-close-button").addEventListener("click", function (evt) {
             document.getElementById("popup-course-records").style.display = "none";
-            document.getElementById("popup-course-records-close-button").style.display = "none";
+            document.getElementById("home-screen-marketing-deck").style.display = "block";
+            document.getElementById("home-screen-flip-tiles").style.display = "block";
+            document.getElementById("home-screen-grid-area").style.display = "block";
+            document.getElementById("popup-course-records").scrollIntoView();
         });
         document.getElementById("popup-c2s-training-close-button").addEventListener("click", function (evt) {
             document.getElementById("popup-c2s-training").style.display = "none";
-            document.getElementById("popup-c2s-training-close-button").style.display = "none";
+            document.getElementById("home-screen-marketing-deck").style.display = "block";
+            document.getElementById("home-screen-flip-tiles").style.display = "block";
+            document.getElementById("home-screen-grid-area").style.display = "block";
+            const e = document.getElementById("popup-c2s-training");
+            e.scrollIntoView();
         });
         // document.getElementById("popup-our-history-close-button").addEventListener("click", function (evt) {
         //     document.getElementById("popup-our-history").style.display = "none";

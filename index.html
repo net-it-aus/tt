@@ -37,26 +37,26 @@
 
 <div class="site-content-wrapper">
 
-    <header>
-        <div class="entity-name" >
-            <br>
-            <h1 style="text-shadow: 2px 2px navy">Turramurra Trotters</h1>
-            <h4>...running since 1974</h4>
-            <br>
-            <br>
+    <header class="my-header">
+        <div class="my-header entity-name-container" >
+            <br class="my-header">
+            <h1 class="my-header entity-name">Turramurra Trotters</h1>
+            <h4 class="my-header">...running since 1974</h4>
+            <br class="my-header">
+            <br class="my-header">
         </div>
-        <div class="header-nav-container">
-            <nav class="header-nav">
+        <div class="my-header header-nav-container">
+            <nav class="my-header header-nav">
             </nav>
         </div>
     </header>
     <main class="site-content-main">
 
-        <section class="marketing-deck-01">
+        <section id="home-screen-marketing-deck" class="home-screen-marketing-deck">
             <h2>Join us!</h2>
         </section>
 
-        <!-- <section class="section-flip-tiles"> -->
+        <section id="home-screen-flip-tiles" class="home-screen-flip-tiles">
             <div class="flip-tiles-container">
                 <!-- RUN -->
                 <div id="flip-tile-1of6" class="flip-tile opacity1">
@@ -164,44 +164,48 @@
                     </div>
                 </div>
             </div>
-        <!-- </section> -->
+        </section>
 
-        <div class="grid-area-class">
+        <section id="home-screen-grid-area">
+            <div class="home-screen-grid-area">
 
-            <div class="grid-item area-01 area opacity1 popup-courses-open">
-                <h2 class="popup-courses-open">Courses</h2>
-                <h3 class="popup-courses-open">...we have been runnig thses routes for decades</h3>
+                <div class="grid-item area-01 area opacity1 popup-courses-open">
+                    <h2 class="popup-courses-open">Courses</h2>
+                    <h3 class="popup-courses-open">...we have been running thses routes for decades</h3>
+                </div>
+
+                <div class="grid-item area-02 area opacity1 popup-popular-events-open">
+                    <h2 class="popup-popular-events-open">Popular Events</h2>
+                    <h3 class="popup-popular-events-open">...you are likely to see Turramurra Trotters at these events</h3>
+                </div>
+
+                <div class="grid-item area-03 area opacity1 popup-race-reports-open">
+                    <h2 class="popup-race-reports-open">Race Reports</h2>
+                    <h3>...coming soon</h3>
+                </div>
+
+                <div class="grid-item area-04 area opacity1 popup-course-records-open">
+                    <h2 class="popup-course-records-open">Course Records</h2>
+                    <h3 class="popup-course-records-open">...may need uodating?</h3>
+                </div>
+
+                <div class="grid-item area-05 area opacity1 popup-c2s-training-open">
+                    <h2 class="popup-c2s-training-open">City-2-Surf Training Program</h2>
+                </div>
+
+                <div class="grid-item area-06 area opacity1 popup-our-history-open">
+                    <h2 class="popup-our-history-open">Our History</h2>
+                    <h3>...coming soon</h3>
+                </div>
+
             </div>
+        </section>
 
-            <div class="grid-item area-02 area opacity1 popup-popular-events-open">
-                <h2 class="popup-popular-events-open">Popular Events</h2>
-                <h3 class="popup-popular-events-open">...you are likely to see Turramurra Trotters at these events</h3>
-            </div>
-
-            <div class="grid-item area-03 area opacity1 popup-race-reports-open">
-                <h2 class="popup-race-reports-open">Race Reports</h2>
-                <h3>...coming soon</h3>
-            </div>
-
-            <div class="grid-item area-04 area opacity1 popup-course-records-open">
-                <h2 class="popup-course-records-open">Course Records</h2>
-                <h3 class="popup-course-records-open">...may need uodating?</h3>
-            </div>
-
-            <div class="grid-item area-05 area opacity1 popup-c2s-training-open">
-                <h2 class="popup-c2s-training-open">City-2-Surf Training Program</h2>
-            </div>
-
-            <div class="grid-item area-06 area opacity1 popup-our-history-open">
-                <h2 class="popup-our-history-open">Our History</h2>
-                <h3>...coming soon</h3>
-            </div>
-
-        </div>
-
-        <!-- popup-courses start -->
+        <section id="popup-courses-section">
             <div id="popup-courses" class="popup-courses fade-in-element">
-                <div id="popup-courses-close-button"><img src="./media/exit-cropped.png" alt="Avatar" class="exit-button"></div>
+                <div id="popup-courses-close-button">
+                    <img src="./media/red-close-button.png" alt="Avatar" class="exit-button">
+                </div>
                 <br>
                 <div class="x-centre">
                     <h2>Courses</h2>
@@ -294,7 +298,7 @@
                             And follow 15.0k course to the finish.
                             <br>
                             <br>
-                            <img src="./media/21-48k-run.jpg" alt="Avatar" style="object-fit:contain;width:95%;height:auto;padding-top:5px;">
+                            <img src="./media/21-48k-run.jpg" alt="Avatar" class="image-from-phone" style="object-fit:contain;width:95%;height:auto;padding-top:5px;">
                             <br>
                         </ul>
                     </div>
@@ -306,141 +310,173 @@
                     <br>
                 </div>
             </div>
+        </section>
         <!-- popup-courses end -->
 
-        <!-- popup-popular-events start -->
+        <section id="popup-popular-events-section">
             <div id="popup-popular-events" class="popup-popular-events fade-in-element">
-                <div id="popup-popular-events-close-button"><img src="./media/exit-cropped.png" alt="Avatar" class="exit-button"></div>
-                <table class="events-table">
+                <div id="popup-popular-events-close-button">
+                    <img src="./media/red-close-button.png" alt="Avatar" class="exit-button">
+                </div>
+                <table class="popup-popular-events-table">
                     <tr><th>Date(s)</th><th>Day(s)</th><th>Event Name</th><th>Distances</th><th>Comments</th><th>event date confirmed on</th><th>URL</th></tr>
-                    <tr><td>1-Jan-2024</td><td>Sat</td><td>Beyond the Black Stump</td><td>16k / 33k / 8k Walk</td><td>A tradidional New Years Day run</td><td>Mon 15 May 2023</td><td><a href="https://www.runningcalendar.com.au/event/beyond-the-black-stump/">www</td></tr>
-                    <tr><td>9-10 Mar 2024</td><td>Sat - Sun</td><td>Orange Running Festival</td><td>1mile / 5k / 10k / 21k / 42k</td><td>40 Trotters in 1974</td><td>Mon 15 May 2023</td><td><a href="https://www.orangerunningfestival.com.au/">www</td></tr>
-                    <tr><td>9-Mar-2024</td><td>Sat</td><td>Six Foot Track</td><td>45k</td><td>A great event</td><td>Mon 15 May 2023</td><td><a href="https://www.sixfoot.com/">www</td></tr>
-                    <tr><td>14 Apr 2024 tbc</td><td>Sun</td><td>Canberra Marathon</td><td>Kids 2K / 5.4K / 10K / 21k / 42k</td><td>Watch out for early bird discounts</td><td>to be confirmed</td><td><a href="https://solemotive.com/pages/canberra-times-marathon-festival">www</td></tr>
-                    <tr><td>25-Apr-2024</td><td>Thu</td><td>TT Anzac Day Run</td><td>20k</td><td>Run back from Dawn Service</td><td>Mon 15 May 2023</td><td><a href="https://www.turramurratrotters.org">www</td></tr>
-                    <tr><td>5 May 2024 tbc</td><td>Sun</td><td>Manly Rotary Fun Run</td><td>2k / 5k / 10k</td><td>possible sightings of Peter Welch</td><td>Mon 15 May 2023</td><td><a href="https://www.manlyfunrun.org/">www</td></tr>
-                    <tr><td>9 - 12 May 2024 tbc</td><td>Thu - Sun</td><td>Ultra-Trail Australia</td><td>1k / 11 / 22 / 50k / 100k</td><td>Tough runs</td><td>Mon 15 May 2023</td><td><a href="https://www.ultratrailaustralia.com.au/">www</td></tr>
-                    <tr><td>21-May-2023</td><td>Sun</td><td>SMH Half Marathon</td><td>21k</td><td>The classic half!</td><td>Mon 15 May 2023</td><td><a href="https://smhhalfmarathon.com.au/">www</td></tr>
-                    <tr><td>28-May-2023</td><td>Sun</td><td>Lindfield Fun Run</td><td>2k / 5k / 10k</td><td>A Trotters tradional run</td><td>Mon 15 May 2023</td><td><a href="https://lindfieldfunrun.org.au/">www</td></tr>
-                    <tr><td>4-Jun-2023</td><td>Sun</td><td>The Great NOSH Footrace</td><td>16k / 22k</td><td>by Orienteering NSW</td><td>Mon 15 May 2023</td><td><a href="https://thegreatnoshfootrace.com.au/">www</td></tr>
-                    <tr><td>18-Jun-2023</td><td>Sun</td><td>Ku-ring-gai Chase Fun Run</td><td>2k / 5k / 10k</td><td>A charity run</td><td>Mon 15 May 2023</td><td><a href="https://tkcfunrun.org.au/wp/">www</td></tr>
-                    <tr><td>tbc</td><td>tbc</td><td>Western Sydney Marathon</td><td>10k / 21k / 42k</td><td>…check their website</td><td>Mon 15 May 2023</td><td><a href="https://www.westernsydneymarathon.com.au/">www</td></tr>
-                    <tr><td>1 - 2 Jul 2023</td><td>Sat - Sun</td><td>Gold Coast Marathon</td><td>2k / 4k / 5k / 10k / 21k / 42k / 63.3k 2 day</td><td>Ask Richard who has run 5! Marathons that is not k's.</td><td>Mon 15 May 2023</td><td><a href="https://goldcoastmarathon.com.au/">www</td></tr>
-                    <tr><td>16-Jul-2023</td><td>Sun</td><td>Winery Running Festival</td><td>2k / 5k / 10.5k / 21k / 42k</td><td>The marathon is back</td><td>Mon 15 May 2023</td><td><a href="https://wineryrun.com/">www</td></tr>
-                    <tr><td>cancelled for 2023</td><td>n/a</td><td>Westlink M7 Marathon</td><td>5k / 10k / 21k / 42k</td><td>Great course</td><td>Mon 15 May 2023</td><td><a href="https://www.blacktown.nsw.gov.au/Events-and-activities/Westlink-M7-Blacktown-Running-Festival">www</td></tr>
-                    <tr><td>13-Aug-2022</td><td>Sun</td><td>City to Surf</td><td>14k</td><td>Our biggest Event of the year!</td><td>Mon 15 May 2023</td><td><a href="https://city2surf.com.au/">www</td></tr>
-                    <tr><td>27-Aug-2023</td><td>Sun</td><td>Pub-2-Pub aka Beach-2-Beach</td><td>3k / 6k / 13k</td><td>13k is a Michael Fortune favourite</td><td>Mon 15 May 2023</td><td><a href="https://beach2beach.com.au/">www</td></tr>
-                    <tr><td>tbc</td><td>tbc</td><td>Bilpin Fun Run (Willy2Billy)</td><td>16.77k / 31.45k</td><td>…check their website</td><td>Mon 15 May 2023</td><td><a href="http://www.bilpinbushrun.com.au/">www</td></tr>
-                    <tr><td>tbc</td><td>tbc</td><td>SAN Fun Run</td><td>5k / 10k</td><td>…check their website</td><td>Mon 15 May 2023</td><td><a href="https://www.sah.org.au/run-for-life">www</td></tr>
-                    <tr><td>tbc</td><td>tbc</td><td>Walk(Run) to Work Day</td><td>…</td><td>…check their website</td><td>Mon 15 May 2023</td><td><a href="https://www.walk.com.au/WTW/homepage.asp">www</td></tr>
-                    <tr><td>17-Sep-2023</td><td>Sun</td><td>Abbott World Marathon Majors Candidate Race (previously Blackmores Running Festival)</td><td>3.5k / 10k / 21.095k / 42.195k</td><td>a favourite of Les</td><td>Mon 15 May 2023</td><td><a href="https://sydneyrunningfestival.com.au/">www</td></tr>
-                    <tr><td>22-Oct-2023</td><td>Sun</td><td>7 Bridges Walk Cancer Council event</td><td>28k</td><td>See Sydney on Foot</td><td>Mon 15 May 2023</td><td><a href="https://www.7bridgeswalk.com.au/">www</td></tr>
-                    <tr><td>22-Oct-2023</td><td>Sun</td><td>Mt Panorama Punish</td><td>6.2k (elevation gain 174m ?)</td><td>One hot lap around Mt Panorama</td><td>Mon 15 May 2023</td><td><a href="http://panoramapunish.com/">www</td></tr>
-                    <tr><td>4 - 5 Nov 2023</td><td>tbc</td><td>Carcoar Cup Running Festival</td><td>…</td><td>…check their website</td><td>Mon 15 May 2023</td><td><a href="https://www.carcoar.com.au/news-events/carcoar-cup-running-festival">www</td></tr>
-                    <tr><td>18-19 Nov 2023</td><td>Sat - Sun</td><td>Stromlo Running Festival</td><td>5k / 10k /15k / 30k / 50k</td><td>Hosted by Rob de Castella</td><td>Mon 15 May 2023</td><td><a href="https://stromlorunningfestival.com.au/">www</td></tr>
-                    <tr><td>tbc</td><td>tbc</td><td>Central Coast Half</td><td>10k / 21.1k</td><td>Check with Martin Smith</td><td>Mon 15 May 2023</td><td><a href="https://www.runningcalendar.com.au/event/central-coast-half-marathon/">www</td></tr>
+                    <tr><td>1-Jan-2024</td><td>Sat</td><td>Beyond the Black Stump</td><td>16k / 33k / 8k Walk</td><td>A tradidional New Years Day run</td><td>Mon 15 May 2023</td><td><a href="https://www.runningcalendar.com.au/event/beyond-the-black-stump/" target="_blank">www</td></tr>
+                    <tr><td>9-10 Mar 2024</td><td>Sat - Sun</td><td>Orange Running Festival</td><td>1mile / 5k / 10k / 21k / 42k</td><td>40 Trotters in 1974</td><td>Mon 15 May 2023</td><td><a href="https://www.orangerunningfestival.com.au/" target="_blank">www</td></tr>
+                    <tr><td>9-Mar-2024</td><td>Sat</td><td>Six Foot Track</td><td>45k</td><td>A great event</td><td>Mon 15 May 2023</td><td><a href="https://www.sixfoot.com/" target="_blank">www</td></tr>
+                    <tr><td>14 Apr 2024 tbc</td><td>Sun</td><td>Canberra Marathon</td><td>Kids 2K / 5.4K / 10K / 21k / 42k</td><td>Watch out for early bird discounts</td><td>to be confirmed</td><td><a href="https://solemotive.com/pages/canberra-times-marathon-festival" target="_blank">www</td></tr>
+                    <tr><td>25-Apr-2024</td><td>Thu</td><td>TT Anzac Day Run</td><td>20k</td><td>Run back from Dawn Service</td><td>Mon 15 May 2023</td><td><a href="https://www.turramurratrotters.org" target="_blank">www</td></tr>
+                    <tr><td>5 May 2024 tbc</td><td>Sun</td><td>Manly Rotary Fun Run</td><td>2k / 5k / 10k</td><td>possible sightings of Peter Welch</td><td>Mon 15 May 2023</td><td><a href="https://www.manlyfunrun.org/" target="_blank">www</td></tr>
+                    <tr><td>9 - 12 May 2024 tbc</td><td>Thu - Sun</td><td>Ultra-Trail Australia</td><td>1k / 11 / 22 / 50k / 100k</td><td>Tough runs</td><td>Mon 15 May 2023</td><td><a href="https://www.ultratrailaustralia.com.au/" target="_blank">www</td></tr>
+                    <tr><td>21-May-2023</td><td>Sun</td><td>SMH Half Marathon</td><td>21k</td><td>The classic half!</td><td>Mon 15 May 2023</td><td><a href="https://smhhalfmarathon.com.au/" target="_blank">www</td></tr>
+                    <tr><td>28-May-2023</td><td>Sun</td><td>Lindfield Fun Run</td><td>2k / 5k / 10k</td><td>A Trotters tradional run</td><td>Mon 15 May 2023</td><td><a href="https://lindfieldfunrun.org.au/" target="_blank">www</td></tr>
+                    <tr><td>4-Jun-2023</td><td>Sun</td><td>The Great NOSH Footrace</td><td>16k / 22k</td><td>by Orienteering NSW</td><td>Mon 15 May 2023</td><td><a href="https://thegreatnoshfootrace.com.au/" target="_blank">www</td></tr>
+                    <tr><td>18-Jun-2023</td><td>Sun</td><td>Ku-ring-gai Chase Fun Run</td><td>2k / 5k / 10k</td><td>A charity run</td><td>Mon 15 May 2023</td><td><a href="https://tkcfunrun.org.au/wp/" target="_blank">www</td></tr>
+                    <tr><td>tbc</td><td>tbc</td><td>Western Sydney Marathon</td><td>10k / 21k / 42k</td><td>…check their website</td><td>Mon 15 May 2023</td><td><a href="https://www.westernsydneymarathon.com.au/" target="_blank">www</td></tr>
+                    <tr><td>1 - 2 Jul 2023</td><td>Sat - Sun</td><td>Gold Coast Marathon</td><td>2k / 4k / 5k / 10k / 21k / 42k / 63.3k 2 day</td><td>Ask Richard who has run 5! Marathons that is not k's.</td><td>Mon 15 May 2023</td><td><a href="https://goldcoastmarathon.com.au/" target="_blank">www</td></tr>
+                    <tr><td>16-Jul-2023</td><td>Sun</td><td>Winery Running Festival</td><td>2k / 5k / 10.5k / 21k / 42k</td><td>The marathon is back</td><td>Mon 15 May 2023</td><td><a href="https://wineryrun.com/" target="_blank">www</td></tr>
+                    <tr><td>cancelled for 2023</td><td>n/a</td><td>Westlink M7 Marathon</td><td>5k / 10k / 21k / 42k</td><td>Great course</td><td>Mon 15 May 2023</td><td><a href="https://www.blacktown.nsw.gov.au/Events-and-activities/Westlink-M7-Blacktown-Running-Festival" target="_blank">www</td></tr>
+                    <tr><td>13-Aug-2022</td><td>Sun</td><td>City to Surf</td><td>14k</td><td>Our biggest Event of the year!</td><td>Mon 15 May 2023</td><td><a href="https://city2surf.com.au/" target="_blank">www</td></tr>
+                    <tr><td>27-Aug-2023</td><td>Sun</td><td>Pub-2-Pub aka Beach-2-Beach</td><td>3k / 6k / 13k</td><td>13k is a Michael Fortune favourite</td><td>Mon 15 May 2023</td><td><a href="https://beach2beach.com.au/" target="_blank">www</td></tr>
+                    <tr><td>tbc</td><td>tbc</td><td>Bilpin Fun Run (Willy2Billy)</td><td>16.77k / 31.45k</td><td>…check their website</td><td>Mon 15 May 2023</td><td><a href="http://www.bilpinbushrun.com.au/" target="_blank">www</td></tr>
+                    <tr><td>tbc</td><td>tbc</td><td>SAN Fun Run</td><td>5k / 10k</td><td>…check their website</td><td>Mon 15 May 2023</td><td><a href="https://www.sah.org.au/run-for-life" target="_blank">www</td></tr>
+                    <tr><td>tbc</td><td>tbc</td><td>Walk(Run) to Work Day</td><td>…</td><td>…check their website</td><td>Mon 15 May 2023</td><td><a href="https://www.walk.com.au/WTW/homepage.asp" target="_blank">www</td></tr>
+                    <tr><td>17-Sep-2023</td><td>Sun</td><td>Abbott World Marathon Majors Candidate Race (previously Blackmores Running Festival)</td><td>3.5k / 10k / 21.095k / 42.195k</td><td>a favourite of Les</td><td>Mon 15 May 2023</td><td><a href="https://sydneyrunningfestival.com.au/" target="_blank">www</td></tr>
+                    <tr><td>22-Oct-2023</td><td>Sun</td><td>7 Bridges Walk Cancer Council event</td><td>28k</td><td>See Sydney on Foot</td><td>Mon 15 May 2023</td><td><a href="https://www.7bridgeswalk.com.au/" target="_blank">www</td></tr>
+                    <tr><td>22-Oct-2023</td><td>Sun</td><td>Mt Panorama Punish</td><td>6.2k (elevation gain 174m ?)</td><td>One hot lap around Mt Panorama</td><td>Mon 15 May 2023</td><td><a href="http://panoramapunish.com/" target="_blank">www</td></tr>
+                    <tr><td>4 - 5 Nov 2023</td><td>tbc</td><td>Carcoar Cup Running Festival</td><td>…</td><td>…check their website</td><td>Mon 15 May 2023</td><td><a href="https://www.carcoar.com.au/news-events/carcoar-cup-running-festival" target="_blank">www</td></tr>
+                    <tr><td>18-19 Nov 2023</td><td>Sat - Sun</td><td>Stromlo Running Festival</td><td>5k / 10k /15k / 30k / 50k</td><td>Hosted by Rob de Castella</td><td>Mon 15 May 2023</td><td><a href="https://stromlorunningfestival.com.au/" target="_blank">www</td></tr>
+                    <tr><td>tbc</td><td>tbc</td><td>Central Coast Half</td><td>10k / 21.1k</td><td>Check with Martin Smith</td><td>Mon 15 May 2023</td><td><a href="https://www.runningcalendar.com.au/event/central-coast-half-marathon/" target="_blank">www</td></tr>
                 </table>
             </div>
+        </section>
         <!-- popup-popular-events end -->
 
-        <!-- popup-course-records start -->
+        <section id="popup-course-records-section">
             <div id="popup-course-records" class="popup-course-records fade-in-element">
-                <div id="popup-course-records-close-button"><img src="./media/exit-cropped.png" alt="Avatar" class="exit-button"></div>
-                <table width="700" border="1" cellspacing="1" cellpadding="1" bgcolor="lightblue">
-                    <caption><span style="color:#00008b;font-size:small;"><em>The Trotters’ Records</em></span><em></em></caption>
+                <div id="popup-course-records-close-button">
+                    <img src="./media/red-close-button.png" alt="Avatar" class="exit-button">
+                </div>
+                <table x-width="700" x-border="1" x-cellspacing="1" x-cellpadding="1" x-bgcolor="lightblue">
+                    <h1>The Trotters’ Records</h1>
+                    <!-- <caption><span x-style="color:#00008b;font-size:small;"><em>The Trotters’ Records</em></span><em></em></caption> -->
                     <tbody>
                     <tr>
-                    <th><span style="color:black;font-size:small;">Course</span></th>
-                    <th><span style="color:blue;font-size:small;">Fastest</span></th>
-                    <th><span style="color:blue;font-size:small;">Time</span></th>
-                    <th><span style="color:blue;font-size:x-small;">Year</span></th>
-                    <th><span style="color:#8b0000;font-size:small;">Second</span></th>
-                    <th><span style="color:#8b0000;font-size:small;">Time</span></th>
-                    <th><span style="color:#8b0000;font-size:small;">Year</span></th>
-                    <th><span style="color:#006400;font-size:small;">Third</span></th>
-                    <th><span style="color:#006400;font-size:small;">Time</span></th>
-                    <th><span style="color:#006400;font-size:small;">Year</span></th>
+                    <th><span x-style="color:black;font-size:small;">Course</span></th>
+                    <th style="background-color:aqua;padding:0px;">&nbsp;</th>
+                    <th><span x-style="color:blue;font-size:small;">Fastest</span></th>
+                    <th><span x-style="color:blue;font-size:small;">Time</span></th>
+                    <th><span x-style="color:blue;font-size:x-small;">Year</span></th>
+                    <th style="background-color:aqua;padding:0px;">&nbsp;</th>
+                    <th><span x-style="color:#8b0000;font-size:small;">Second</span></th>
+                    <th><span x-style="color:#8b0000;font-size:small;">Time</span></th>
+                    <th><span x-style="color:#8b0000;font-size:small;">Year</span></th>
+                    <th style="background-color:aqua;padding:0px;">&nbsp;</th>
+                    <th><span x-style="color:#006400;font-size:small;">Third</span></th>
+                    <th><span x-style="color:#006400;font-size:small;">Time</span></th>
+                    <th><span x-style="color:#006400;font-size:small;">Year</span></th>
                     </tr>
                     <tr>
-                    <td><span style="color:black;font-size:small;">6.5 kms</span></td>
-                    <td><span style="color:blue;font-size:small;">Quinton Morley</span></td>
-                    <td><span style="color:blue;font-size:small;">20:01</span></td>
-                    <td><span style="color:blue;font-size:small;">1984</span></td>
-                    <td><span style="color:#8b0000;font-size:small;">Bernard Corden</span></td>
-                    <td><span style="color:#8b0000;font-size:small;">20:28</span></td>
-                    <td><span style="color:#8b0000;font-size:small;">1984</span></td>
-                    <td><span style="color:#006400;font-size:small;">Evan Fountain</span></td>
-                    <td><span style="color:#006400;font-size:small;">21:39</span></td>
-                    <td><span style="color:#006400;font-size:small;">1997</span></td>
+                    <td><span x-style="color:black;font-size:small;">6.5 kms</span></td>
+                    <td style="background-color:aqua;padding:0px;">&nbsp;</td>
+                    <td><span x-style="color:blue;font-size:small;">Quinton Morley</span></td>
+                    <td><span x-style="color:blue;font-size:small;">20:01</span></td>
+                    <td><span x-style="color:blue;font-size:small;">1984</span></td>
+                    <td style="background-color:aqua;padding:0px;">&nbsp;</td>
+                    <td><span x-style="color:#8b0000;font-size:small;">Bernard Corden</span></td>
+                    <td><span x-style="color:#8b0000;font-size:small;">20:28</span></td>
+                    <td><span x-style="color:#8b0000;font-size:small;">1984</span></td>
+                    <td style="background-color:aqua;padding:0px;">&nbsp;</td>
+                    <td><span x-style="color:#006400;font-size:small;">Evan Fountain</span></td>
+                    <td><span x-style="color:#006400;font-size:small;">21:39</span></td>
+                    <td><span x-style="color:#006400;font-size:small;">1997</span></td>
                     </tr>
                     <tr>
-                    <td><span style="color:black;font-size:small;">8.6 kms</span></td>
-                    <td><span style="color:blue;font-size:small;">Quinton Morley</span></td>
-                    <td><span style="color:blue;font-size:small;">27:07</span></td>
-                    <td><span style="color:blue;font-size:small;">1985</span></td>
-                    <td><span style="color:#8b0000;font-size:small;">Steve Pollard</span></td>
-                    <td><span style="color:#8b0000;font-size:small;">28:08</span></td>
-                    <td><span style="color:#8b0000;font-size:small;">1982</span></td>
-                    <td><span style="color:#006400;font-size:small;">Keith Canard</span></td>
-                    <td><span style="color:#006400;font-size:small;">29:19</span></td>
-                    <td><span style="color:#006400;font-size:small;">1983</span></td>
+                    <td><span x-style="color:black;font-size:small;">8.6 kms</span></td>
+                    <td style="background-color:aqua;padding:0px;">&nbsp;</td>
+                    <td><span x-style="color:blue;font-size:small;">Quinton Morley</span></td>
+                    <td><span x-style="color:blue;font-size:small;">27:07</span></td>
+                    <td><span x-style="color:blue;font-size:small;">1985</span></td>
+                    <td style="background-color:aqua;padding:0px;">&nbsp;</td>
+                    <td><span x-style="color:#8b0000;font-size:small;">Steve Pollard</span></td>
+                    <td><span x-style="color:#8b0000;font-size:small;">28:08</span></td>
+                    <td><span x-style="color:#8b0000;font-size:small;">1982</span></td>
+                    <td style="background-color:aqua;padding:0px;">&nbsp;</td>
+                    <td><span x-style="color:#006400;font-size:small;">Keith Canard</span></td>
+                    <td><span x-style="color:#006400;font-size:small;">29:19</span></td>
+                    <td><span x-style="color:#006400;font-size:small;">1983</span></td>
                     </tr>
                     <tr>
-                    <td><span style="color:black;font-size:small;">10.2kms</span></td>
-                    <td><span style="color:blue;font-size:small;">Quinton Morley</span></td>
-                    <td><span style="color:blue;font-size:small;">31:50</span></td>
-                    <td><span style="color:blue;font-size:small;">1984</span></td>
-                    <td><span style="color:#8b0000;font-size:small;">Andrew Spilling</span></td>
-                    <td><span style="color:#8b0000;font-size:small;">32:56</span></td>
-                    <td><span style="color:#8b0000;font-size:small;">1978</span></td>
-                    <td><span style="color:#006400;font-size:small;">Steve Pollard</span></td>
-                    <td><span style="color:#006400;font-size:small;">33:44</span></td>
-                    <td><span style="color:#006400;font-size:small;">1982</span></td>
+                    <td><span x-style="color:black;font-size:small;">10.2kms</span></td>
+                    <td style="background-color:aqua;padding:0px;">&nbsp;</td>
+                    <td><span x-style="color:blue;font-size:small;">Quinton Morley</span></td>
+                    <td><span x-style="color:blue;font-size:small;">31:50</span></td>
+                    <td><span x-style="color:blue;font-size:small;">1984</span></td>
+                    <td style="background-color:aqua;padding:0px;">&nbsp;</td>
+                    <td><span x-style="color:#8b0000;font-size:small;">Andrew Spilling</span></td>
+                    <td><span x-style="color:#8b0000;font-size:small;">32:56</span></td>
+                    <td><span x-style="color:#8b0000;font-size:small;">1978</span></td>
+                    <td style="background-color:aqua;padding:0px;">&nbsp;</td>
+                    <td><span x-style="color:#006400;font-size:small;">Steve Pollard</span></td>
+                    <td><span x-style="color:#006400;font-size:small;">33:44</span></td>
+                    <td><span x-style="color:#006400;font-size:small;">1982</span></td>
                     </tr>
                     <tr>
-                    <td><span style="color:black;font-size:small;">12.0kms</span></td>
-                    <td><span style="color:blue;font-size:small;">Quinton Morley</span></td>
-                    <td><span style="color:blue;font-size:small;">38:18</span></td>
-                    <td><span style="color:blue;font-size:small;">1980</span></td>
-                    <td><span style="color:#8b0000;font-size:small;">Robert Spilling</span></td>
-                    <td><span style="color:#8b0000;font-size:small;">38:23</span></td>
-                    <td><span style="color:#8b0000;font-size:small;">1977</span></td>
-                    <td><span style="color:#006400;font-size:small;">Steve Pollard</span></td>
-                    <td><span style="color:#006400;font-size:small;">39:43</span></td>
-                    <td><span style="color:#006400;font-size:small;">1983</span></td>
+                    <td><span x-style="color:black;font-size:small;">12.0kms</span></td>
+                    <td style="background-color:aqua;padding:0px;">&nbsp;</td>
+                    <td><span x-style="color:blue;font-size:small;">Quinton Morley</span></td>
+                    <td><span x-style="color:blue;font-size:small;">38:18</span></td>
+                    <td><span x-style="color:blue;font-size:small;">1980</span></td>
+                    <td style="background-color:aqua;padding:0px;">&nbsp;</td>
+                    <td><span x-style="color:#8b0000;font-size:small;">Robert Spilling</span></td>
+                    <td><span x-style="color:#8b0000;font-size:small;">38:23</span></td>
+                    <td><span x-style="color:#8b0000;font-size:small;">1977</span></td>
+                    <td style="background-color:aqua;padding:0px;">&nbsp;</td>
+                    <td><span x-style="color:#006400;font-size:small;">Steve Pollard</span></td>
+                    <td><span x-style="color:#006400;font-size:small;">39:43</span></td>
+                    <td><span x-style="color:#006400;font-size:small;">1983</span></td>
                     </tr>
                     <tr>
-                    <td><span style="color:black;font-size:small;">14.0kms</span></td>
-                    <td><span style="color:blue;font-size:small;">Keith Canard</span></td>
-                    <td><span style="color:blue;font-size:small;">48:30</span></td>
-                    <td><span style="color:blue;font-size:small;">1979&nbsp;</span></td>
-                    <td><span style="color:#8b0000;font-size:small;">Brian Preston</span></td>
-                    <td><span style="color:#8b0000;font-size:small;">48:48</span></td>
-                    <td><span style="color:#8b0000;font-size:small;">1979</span></td>
-                    <td><span style="color:#006400;font-size:small;">John Waddington</span></td>
-                    <td><span style="color:#006400;font-size:small;">49:22</span></td>
-                    <td><span style="color:#006400;font-size:small;">1980</span></td>
+                    <td><span x-style="color:black;font-size:small;">14.0kms</span></td>
+                    <td style="background-color:aqua;padding:0px;">&nbsp;</td>
+                    <td><span x-style="color:blue;font-size:small;">Keith Canard</span></td>
+                    <td><span x-style="color:blue;font-size:small;">48:30</span></td>
+                    <td><span x-style="color:blue;font-size:small;">1979&nbsp;</span></td>
+                    <td style="background-color:aqua;padding:0px;">&nbsp;</td>
+                    <td><span x-style="color:#8b0000;font-size:small;">Brian Preston</span></td>
+                    <td><span x-style="color:#8b0000;font-size:small;">48:48</span></td>
+                    <td><span x-style="color:#8b0000;font-size:small;">1979</span></td>
+                    <td style="background-color:aqua;padding:0px;">&nbsp;</td>
+                    <td><span x-style="color:#006400;font-size:small;">John Waddington</span></td>
+                    <td><span x-style="color:#006400;font-size:small;">49:22</span></td>
+                    <td><span x-style="color:#006400;font-size:small;">1980</span></td>
                     </tr>
                     <tr>
-                    <td><span style="color:black;font-size:small;">15.1kms</span></td>
-                    <td><span style="color:blue;font-size:small;">Quinton Morley</span></td>
-                    <td><span style="color:blue;font-size:small;">52:12</span></td>
-                    <td><span style="color:blue;font-size:small;">1979</span></td>
-                    <td><span style="color:#8b0000;font-size:small;">Steve Pollard</span></td>
-                    <td><span style="color:#8b0000;font-size:small;">52:13</span></td>
-                    <td><span style="color:#8b0000;font-size:small;">1981</span></td>
-                    <td><span style="color:#006400;font-size:small;">Keith Canard</span></td>
-                    <td><span style="color:#006400;font-size:small;">52:27</span></td>
-                    <td><span style="color:#006400;font-size:small;">1979</span></td>
+                    <td><span x-style="color:black;font-size:small;">15.1kms</span></td>
+                    <td style="background-color:aqua;padding:0px;">&nbsp;</td>
+                    <td><span x-style="color:blue;font-size:small;">Quinton Morley</span></td>
+                    <td><span x-style="color:blue;font-size:small;">52:12</span></td>
+                    <td><span x-style="color:blue;font-size:small;">1979</span></td>
+                    <td style="background-color:aqua;padding:0px;">&nbsp;</td>
+                    <td><span x-style="color:#8b0000;font-size:small;">Steve Pollard</span></td>
+                    <td><span x-style="color:#8b0000;font-size:small;">52:13</span></td>
+                    <td><span x-style="color:#8b0000;font-size:small;">1981</span></td>
+                    <td style="background-color:aqua;padding:0px;">&nbsp;</td>
+                    <td><span x-style="color:#006400;font-size:small;">Keith Canard</span></td>
+                    <td><span x-style="color:#006400;font-size:small;">52:27</span></td>
+                    <td><span x-style="color:#006400;font-size:small;">1979</span></td>
                     </tr>
                     </tbody>
                 </table>
+                <div>...</div>
             </div>
+        </section>
         <!-- popup-course-records end -->
 
-        <!-- popup-c2s-training-program start -->
+        <section id="popup-c2s-training-program-section">
             <div id="popup-c2s-training" class="popup-c2s-training fade-in-element">
-                <div id="popup-c2s-training-close-button"><img src="./media/exit-cropped.png" alt="Avatar" class="exit-button"></div>
+                <div id="popup-c2s-training-close-button">
+                    <img src="./media/red-close-button.png" alt="Avatar" class="exit-button">
+                </div>
                 <div class="centre">
                     <h2>City-2-Surf Training Program</h2>
                     <div id="weeklySchedule" class="weekly-schedule"></div>
@@ -461,8 +497,8 @@
                 <br>
                 <br>
             </div>
+        </section>
         <!-- popup-c2s-training-program end -->
-
 
     </main>
 
