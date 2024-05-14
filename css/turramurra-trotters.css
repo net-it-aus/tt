@@ -669,3 +669,7 @@ address > div > a{
       max-width:fit-content;
     }
   }
+
+.google-map{
+    border-radius: 20px;
+}
